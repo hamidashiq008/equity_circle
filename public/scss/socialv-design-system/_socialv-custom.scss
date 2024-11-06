@@ -1,0 +1,114 @@
+//fixed suggestion
+@media (min-width: 992px) {
+
+    .fixed-suggestion {
+      position: sticky;
+      top: 80px
+    }
+
+  }
+
+  //sidebar chat
+  .right-sidebar-close {
+    .content-inner {
+      margin-right: 0 !important;
+      transition: all 0.3s ease-in;
+    }
+
+  }
+
+  .content-inner {
+    transition: all 0.3s ease-in;
+  }
+
+  @media (min-width:990px) and (max-width: 1599px) {
+
+
+    .content-inner {
+      margin-right: 0 !important;
+      transition: all 0.3s ease-in;
+    }
+
+    .right-sidebar-close {
+      .content-inner {
+        margin-right: 16.25rem !important;
+        transition: all 0.3s ease-in;
+      }
+
+    }
+  }
+
+  @media (min-width: 990px) and (max-width: 1550px) {
+
+    .content-inner {
+      padding-right: 0.5rem !important;
+    }
+
+    .right-sidebar-close {
+      .content-inner {
+        padding-right: 3rem !important;
+      }
+    }
+  }
+
+  @media (min-width: 1551px) and (max-width: 1800px) {
+
+    .content-inner {
+      padding-right: 3rem !important;
+    }
+
+    .right-sidebar-close {
+      .content-inner {
+        padding-right: 0.5rem !important;
+      }
+    }
+  }
+
+
+  @media (min-width: 1600px) {
+
+    //sidebar chat
+    .right-sidebar-close {
+      .content-inner {
+        margin-right: 0 !important;
+        transition: all 0.3s ease-in;
+      }
+
+    }
+  }
+
+
+//user dropdown
+[data-bs-theme="dark"] .iq-navbar .dropdown .dropdown-menu.sub-drop .iq-sub-card:hover a,
+.iq-navbar .dropdown .dropdown-menu.sub-drop .iq-sub-card:hover h5 {
+  color: var(--bs-primary-hover-bg) !important;
+}
+
+
+//admin chart
+
+.admin-chart-06{
+  transform: translateX(18%);
+}
+
+@media (min-width:768px) and (max-width: 990px) {
+  .admin-chart-06{
+    transform: translateX(25%);
+  }
+}
+
+@media (min-width: 990px) {
+  .admin-chart-06{
+    transform: translateX(-38px);
+  }
+}
+
+//dropdown menu
+.dropdown-menu {
+  z-index: 2;
+}
+
+//weather chart
+#chart-map-column-04 {
+  z-index: 2;
+}

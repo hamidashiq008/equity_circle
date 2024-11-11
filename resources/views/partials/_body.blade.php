@@ -4,13 +4,14 @@
 </div>
 <!-- loader END -->
 <!-- Wrapper Start -->
-{{--  @include('partials._body_sidebar') --}}
-{{-- @include('partials._body_header') --}}
+@include('dashboards.static-banner')
+
+@include('partials._body_header')
 
 <main class="main-content">
     <div class="position-relative">
        {{-- {{$pageheader ?? ''}} --}}
-       <!-- @include('partials._body_header') -->
+        {{-- @include('partials._body_header')  --}}
 
        <div>
        <div class="position-relative">
@@ -23,19 +24,19 @@
         {{ $slot }}
     </div>
        </div>
-<!-- @include('dashboards.modal') -->
-<!-- @include('dashboards.rightSidebar') -->
+    {{-- @include('dashboards.modal') 
+    @include('dashboards.rightSidebar')  --}}
     </div>
 </main>
 <!-- Wrapper End-->
-<!-- @include('partials._body_footer') -->
-<!-- offcanvas start -->
+ {{-- @include('partials._body_footer')  --}}
+ {{-- offcanvas start --> --}}
 {{-- @include('dashboards.rightSidebar') --}}
 <!-- Live Customizer start -->
-<!-- @include('components.setting-offcanvas') -->
+ {{-- @include('components.setting-offcanvas')  --}}
 <!-- Live Customizer end -->
 
-<!-- @include('components.shareoffcanvas') -->
+ {{-- @include('components.shareoffcanvas')  --}}
 
 <!-- Ajax Modal Html-->
 @include('partials.modal-view')

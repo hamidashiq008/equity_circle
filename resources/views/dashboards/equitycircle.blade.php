@@ -1,342 +1,7 @@
-<style>
-*{
-    padding: 0;
-    margin: 0;
-}
-.banner-section{
-    /* background-image: url('../images/Banner.jpg') ; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width:100vw;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
-.image-div::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
-.image-div::-webkit-scrollbar-track{
-    width: 0px;
-}
-
-body{
-    /* overflow-y: hidden; */
-    overflow-x: hidden;
-}
-
-.image-div{
-    width: 100%;   
-    overflow-y: hidden;
-    overflow-x: auto !important;
-    height: 100vh;
-
-    .links{
-        .link-item{
-            width: 10px;
-            height:10px;
-            border-radius: 20px;
-            background: #fff;
-            &#laptop{
-                position: absolute;
-            }
-            &#cap{
-                position: absolute;
-            }
-            &#shoes{
-                position: absolute;
-            }
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 20px;
-                height: 20px;
-                background-color: rgba(255, 230, 230, 0.642);
-                border-radius: 50%;
-                transform: translate(-50%, -50%);
-                opacity: 0;
-                animation: radar-wave 1.5s infinite;
-            }
-
-            .tooltip {
-                position: absolute;
-                bottom: 156%; /* Position above the button */
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: #333;
-                color: #fff;
-                padding: 4px 8px;
-                border-radius: 4px;
-                white-space: nowrap;
-                font-size: 14px;
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease;
-                pointer-events: none; /* Prevents tooltip from blocking button clicks */
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    border-width: 6px;
-                    border-style: solid;
-                    border-color: #333 transparent transparent transparent;
-                }
-            }
-
-            &:hover .tooltip {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    }
-}
-
-
-@keyframes radar-wave {
-    0% {
-        width: 20px;
-        height: 20px;
-        opacity: 0.6;
-    }
-    100% {
-        width: 100px;
-        height: 100px;
-        opacity: 0;
-    }
-}
-
-
-.top-header-div{
-    position: absolute;
-    z-index: 99;
-    top: 10px;
-   
-}
-
-@media(max-width: 2000px){
-    .image-div{
-        min-width: 2000px;
-        overflow-x: scroll;
-    }
-    .image-wrapper{
-        width: 2000px;
-    } 
-    #laptop{
-        left: 1223px;
-    }
-    #cap{
-        left: 903px;
-    }
-    #shoes{
-        left: 1406px;
-    }
-}
-
-@media(max-width: 1900px){
-    .image-div{
-        min-width: 1900px;
-        overflow-x: scroll;
-    }
-    .image-wrapper{
-        width: 1900px;
-    } 
-    #laptop{
-        left: 1167px;
-    }
-    #cap{
-        left: 858px;
-    }
-    #shoes{
-        left: 1331px;
-    }
-}
-
-@media(max-width: 1900px){
-    .image-div{
-        min-width: 1900px;
-        overflow-x: scroll;
-    }
-    .image-wrapper{
-        width: 1900px;
-    } 
-    #laptop{
-        left: 1167px;
-    }
-    #cap{
-        left: 858px;
-    }
-    #shoes{
-        left: 1331px;
-    }
-}
-
-@media(max-width: 1800px){
-    .image-div{
-        min-width: 1800px;
-        overflow-x: scroll;
-    }
-    .image-wrapper{
-        width: 1800px;
-    } 
-    #laptop{
-        left: 1103px;
-    }
-    #cap{
-        left: 813px;
-    }
-    #shoes{
-        left: 1266px;
-    }
-}
-
-@media(max-width: 1700px){
-    .image-div{
-        min-width: 1700px;
-        overflow-x: scroll;
-    }
-    .image-wrapper{
-        width: 1700px;
-    } 
-    #laptop{
-        left: 1039px;
-    }
-    #cap{
-        left: 766px;
-    }
-    #shoes{
-        left: 1193px;
-    }
-}
-
-@media(max-width: 1560px){
-    .image-div{
-        min-width: 1560px;
-        overflow-x: scroll;
-    }
-    .image-wrapper{
-        width: 1560px;
-    } 
-    #laptop{
-        left: 955px;
-    }
-    #cap{
-        left: 703px;
-    }
-    #shoes{
-        left: 1095px;
-    }
-}
-
-
-@media(max-width: 1440px){
-    .image-div{
-        min-width: 1440px;
-        overflow-x: scroll;
-    }
-    .image-wrapper{
-        width: 1440px;
-    } 
-    #laptop{
-        left: 883px;
-    }
-    #cap{
-        left: 649px;
-    }
-    #shoes{
-        left: 1009px;
-    }
-}
-
-.image-wrapper{
-    max-height: 950px;
-}
-
-#laptop{
-    top: 272px;
-}
-#cap{
-    top: 353px;
-}
-#shoes{
-    top: 576px;
-}
-
-.main-content .content-inner {
-    padding: 0 !important;
-}
-
-.stories.storiesWrapper.carousel .story {
-
-    height: 90px;
-}
-
-</style>
-
-
-
-
-
-
-
-
 <x-app-layout :isZuck=true>
-<section class="banner-section">
-            <div class="top-header-div d-flex justify-content-between align-items-center w-100 px-4 ">
-                <div class="left-content">
-                    <ul class="list-unstyled d-flex align-items-center justify-content-start gap-4 m-0">
-                        <li class="text-white">
-                            Albums
-                        </li>
-                        <li class="text-white">
-                            Projects
-                        </li>
-                        <li class="text-white">
-                            Tour
-                        </li>
-                        <li class="text-white">
-                            Shop All
-                        </li>
-                    </ul>
-                </div>
-                <div class="center-content">
-                    <span class="text-white">
-
-                        Drake Related
-                    </span>
-                </div>
-                <div class="right-content">
-                    <span class="text-white">
-                        Cart (0)
-                    </span>
-                </div>
-            </div>
-            <div class="image-div position-relative" style="top: 0; left: 0;">
-                <img src="{{asset('images/Banner.jpg')}}" alt="" class="image-wrapper">
-                <div class="links" style="position: absolute; top: 0; left: 0; z-index: 10;">
-                    <a href="https://www.apple.com/mac/" target="_blank" class="link-item" id="laptop">
-                        <span class="tooltip">Branded Laptops</span>
-                    </a>
-                    <a href="https://speedsports.pk/collections/men-caps" target="_blank" class="link-item" id="cap">
-                        <span class="tooltip">Lattest Design Caps</span>
-                    </a>
-                    <a href="https://www.khazanay.pk/collections/mens-casual-shoes?page=2" target="_blank" class="link-item" id="shoes">
-                        <span class="tooltip">Branded Shoes</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+    
     <!-- <div class="container"> -->
+    <div class="container-fluid">
         <div class="row gx-4 mt-4 px-5">
             <div class="col-lg-8" id="dynamicDivContainer">
                 <div id="content">
@@ -1244,7 +909,7 @@ body{
                                         <div class="d-flex align-items-center gap-2 flex-wrap">
                                             <ul class="list-inline m-0 p-0 post-user-liked-list">
                                                 <li>
-
+    
                                                     <img src="{{ asset('/images/gym(1).jpg') }}" alt="userimg"
                                                         class="rounded-circle img-fluid userimg" loading="lazy">
                                                 </li>
@@ -1284,7 +949,7 @@ body{
                                                             <span class="fw-medium">140 Likes</span>
                                                         </span>
                                                         <div class="dropdown-menu py-2 shadow">
-
+    
                                                             <a class="ms-2 me-2" href="javascript:void(0);"
                                                                 data-bs-toggle="tooltip" data-bs-placement="top"
                                                                 title="Like"><img
@@ -1879,7 +1544,7 @@ body{
                                                                     id="subcomment-collapse3">
                                                                     <div class="d-flex align-items-center gap-3">
                                                                         <div class="flex-shrink-0">
-
+    
                                                                             <img src="  {{ asset('/images/user/1.jpg') }}"
                                                                                 alt="userimg"
                                                                                 class="avatar-48 rounded-circle img-fluid"
@@ -2023,8 +1688,9 @@ body{
                                     </div>
                                     <div class="user-post mt-4">
                                         <div class="ratio ratio-16x9">
-                                            <iframe src="https://www.youtube.com/embed/oHD33oKbKh4?si=VF-Qcp-pZdzUb3RX"
+                                            <iframe src="https://www.youtube.com/embed/1YyAzVmP9xQ"
                                                 allowfullscreen></iframe>
+                                                {{-- <iframe width="1236" height="695" src="https://www.youtube.com/embed/1YyAzVmP9xQ" title="Cryptocurrency In 5 Minutes | Cryptocurrency Explained | What Is Cryptocurrency? | Simplilearn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> --}}
                                         </div>
                                     </div>
                                     <div class="post-meta-likes mt-4">
@@ -2681,7 +2347,7 @@ body{
                                                                 id="subcomment-collapse5">
                                                                 <div class="d-flex align-items-center gap-3">
                                                                     <div class="flex-shrink-0">
-
+    
                                                                         <img src=" {{ asset('/images/user/1.jpg') }}"
                                                                             alt="userimg"
                                                                             class="avatar-48 rounded-circle img-fluid"
@@ -2828,7 +2494,7 @@ body{
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 social-post">
+                    {{-- <div class="col-sm-12 social-post">
                         <div class="card card-block card-stretch card-height">
                             <div class="card-body">
                                 <div class="user-post-data">
@@ -3018,7 +2684,7 @@ body{
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-sm-12 social-post">
                         <div class="card card-block card-stretch card-height">
                             <div class="card-body">
@@ -3507,570 +3173,571 @@ body{
                         </ul>
                     </div>
                 </div>
-            <div class="fixed-suggestion mb-4">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between">
-                        <div class="header-title">
-                            <h4 class="card-title">Suggestions for you</h4>
+                <div class="fixed-suggestion mb-4">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="header-title">
+                                <h4 class="card-title">Suggestions for you</h4>
+                            </div>
+                            <small class="fw-500 text-capitalize">See all</small>
                         </div>
-                        <small class="fw-500 text-capitalize">See all</small>
+                        <div class="card-body pt-0">
+                            <ul class="list-inline m-0 p-0">
+                                <li class="mb-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="{{ asset('/images/crypto(6).jpg') }}" alt="story-img"
+                                            class="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block">
+                                        <div>
+                                            <div class="d-flex align-items-center justify-content-between gap-2">
+                                                <div>
+                                                    <h5>Annette Black</h5>
+                                                    <small class="text-capitalize">Followed by dribbble + 2 more</small>
+                                                </div>
+                                                <div class="d-flex align-items-center flex-shrink-0 gap-2">
+                                                    <button class="btn btn-primary-subtle p-1 lh-1">
+                                                        <i class="material-symbols-outlined font-size-14">
+                                                            add
+                                                        </i>
+                                                    </button>
+                                                    <button class="btn btn-danger-subtle p-1 lh-1">
+                                                        <i class="material-symbols-outlined font-size-14">
+                                                            close
+                                                        </i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="{{ asset('/images/bussiness(1).jpg') }}" alt="story-img"
+                                            class="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block">
+                                        <div>
+                                            <div class="d-flex align-items-center justify-content-between gap-2">
+                                                <div>
+                                                    <h5>Christopher Plessis</h5>
+                                                    <small class="text-capitalize">Followed by dribbble + 2 more</small>
+                                                </div>
+                                                <div class="d-flex align-items-center flex-shrink-0 gap-2">
+                                                    <button class="btn btn-primary-subtle p-1 lh-1">
+                                                        <i class="material-symbols-outlined font-size-14">
+                                                            add
+                                                        </i>
+                                                    </button>
+                                                    <button class="btn btn-danger-subtle p-1 lh-1">
+                                                        <i class="material-symbols-outlined font-size-14">
+                                                            close
+                                                        </i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d-flex justify-content-between flex-wrap gap-2">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="{{ asset('/images/gym(1).jpg') }}" alt="story-img"
+                                            class="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block">
+                                        <div>
+                                            <div class="d-flex align-items-center justify-content-between gap-2">
+                                                <div>
+                                                    <h5>Ellyse Perry</h5>
+                                                    <small class="text-capitalize">Followed by dribbble + 2 more</small>
+                                                </div>
+                                                <div class="d-flex align-items-center flex-shrink-0 gap-2">
+                                                    <button class="btn btn-primary-subtle p-1 lh-1">
+                                                        <i class="material-symbols-outlined font-size-14">
+                                                            add
+                                                        </i>
+                                                    </button>
+                                                    <button class="btn btn-danger-subtle p-1 lh-1">
+                                                        <i class="material-symbols-outlined font-size-14">
+                                                            close
+                                                        </i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card-body pt-0">
-                        <ul class="list-inline m-0 p-0">
-                            <li class="mb-3">
-                                <div class="d-flex align-items-center gap-3">
-                                    <img src="{{ asset('/images/crypto(6).jpg') }}" alt="story-img"
-                                        class="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block">
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between gap-2">
-                                            <div>
-                                                <h5>Annette Black</h5>
-                                                <small class="text-capitalize">Followed by dribbble + 2 more</small>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-shrink-0 gap-2">
-                                                <button class="btn btn-primary-subtle p-1 lh-1">
-                                                    <i class="material-symbols-outlined font-size-14">
-                                                        add
-                                                    </i>
-                                                </button>
-                                                <button class="btn btn-danger-subtle p-1 lh-1">
-                                                    <i class="material-symbols-outlined font-size-14">
-                                                        close
-                                                    </i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mb-3">
-                                <div class="d-flex align-items-center gap-3">
-                                    <img src="{{ asset('/images/bussiness(1).jpg') }}" alt="story-img"
-                                        class="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block">
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between gap-2">
-                                            <div>
-                                                <h5>Christopher Plessis</h5>
-                                                <small class="text-capitalize">Followed by dribbble + 2 more</small>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-shrink-0 gap-2">
-                                                <button class="btn btn-primary-subtle p-1 lh-1">
-                                                    <i class="material-symbols-outlined font-size-14">
-                                                        add
-                                                    </i>
-                                                </button>
-                                                <button class="btn btn-danger-subtle p-1 lh-1">
-                                                    <i class="material-symbols-outlined font-size-14">
-                                                        close
-                                                    </i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="d-flex justify-content-between flex-wrap gap-2">
-                                <div class="d-flex align-items-center gap-3">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="header-title">
+                                <h4 class="card-title">Latest Activities</h4>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <ul class="list-inline m-0 p-0">
+                                <li class="d-flex mb-3 pb-3 border-bottom">
                                     <img src="{{ asset('/images/gym(1).jpg') }}" alt="story-img"
-                                        class="avatar-60 avatar-borderd object-cover avatar-rounded img-fluid d-inline-block">
-                                    <div>
-                                        <div class="d-flex align-items-center justify-content-between gap-2">
-                                            <div>
-                                                <h5>Ellyse Perry</h5>
-                                                <small class="text-capitalize">Followed by dribbble + 2 more</small>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-shrink-0 gap-2">
-                                                <button class="btn btn-primary-subtle p-1 lh-1">
-                                                    <i class="material-symbols-outlined font-size-14">
-                                                        add
-                                                    </i>
-                                                </button>
-                                                <button class="btn btn-danger-subtle p-1 lh-1">
-                                                    <i class="material-symbols-outlined font-size-14">
-                                                        close
-                                                    </i>
-                                                </button>
-                                            </div>
-                                        </div>
+                                        class="avatar-32 avatar-rounded object-cover img-fluid">
+                                    <div class="stories-data ms-3">
+                                        <h6 class="font-size-14">Esther Howard <span class="fw-normal text-body">reacted
+                                                comment
+                                                in to your</span> <span class="fw-normal">post.</span></h6>
+                                        <small class="text-capitalize">19 min ago</small>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between">
-                        <div class="header-title">
-                            <h4 class="card-title">Latest Activities</h4>
+                                </li>
+                                <li class="d-flex mb-3 pb-3 border-bottom">
+                                    <img src="{{ asset('/images/gym(2).jpg') }}" alt="story-img"
+                                        class="avatar-32 avatar-rounded object-cover img-fluid">
+                                    <div class="stories-data ms-3">
+                                        <h6 class="font-size-14">Monty Carlo <span class="text-body fw-normal">followed
+                                                you.</span></h6>
+                                        <small class="text-capitalize">7 day ago</small>
+                                    </div>
+                                </li>
+                                <li class="d-flex mb-3 pb-3 border-bottom">
+                                    <img src="{{ asset('/images/gym(3).jpg') }}" alt="story-img"
+                                        class="avatar-32 avatar-rounded object-cover img-fluid">
+                                    <div class="stories-data ms-3">
+                                        <h6 class="font-size-14">Pete Sariya <span class="text-body fw-normal">voted for
+                                            </span>combination of colors from your brand palette</h6>
+                                        <small class="text-capitalize">1 month ago</small>
+                                    </div>
+                                </li>
+                                <li class="d-flex">
+                                    <img src="{{ asset('/images/gym(4).jpg') }}" alt="story-img"
+                                        class="avatar-32 avatar-rounded object-cover img-fluid">
+                                    <div class="stories-data ms-3">
+                                        <h6 class="font-size-14">Dima Davydov <span class="text-body fw-normal">replied to
+                                                your
+                                                comment</span></h6>
+                                        <small class="text-capitalize">1 month ago</small>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="card-body pt-0">
-                        <ul class="list-inline m-0 p-0">
-                            <li class="d-flex mb-3 pb-3 border-bottom">
-                                <img src="{{ asset('/images/gym(1).jpg') }}" alt="story-img"
-                                    class="avatar-32 avatar-rounded object-cover img-fluid">
-                                <div class="stories-data ms-3">
-                                    <h6 class="font-size-14">Esther Howard <span class="fw-normal text-body">reacted
-                                            comment
-                                            in to your</span> <span class="fw-normal">post.</span></h6>
-                                    <small class="text-capitalize">19 min ago</small>
-                                </div>
-                            </li>
-                            <li class="d-flex mb-3 pb-3 border-bottom">
-                                <img src="{{ asset('/images/gym(2).jpg') }}" alt="story-img"
-                                    class="avatar-32 avatar-rounded object-cover img-fluid">
-                                <div class="stories-data ms-3">
-                                    <h6 class="font-size-14">Monty Carlo <span class="text-body fw-normal">followed
-                                            you.</span></h6>
-                                    <small class="text-capitalize">7 day ago</small>
-                                </div>
-                            </li>
-                            <li class="d-flex mb-3 pb-3 border-bottom">
-                                <img src="{{ asset('/images/gym(3).jpg') }}" alt="story-img"
-                                    class="avatar-32 avatar-rounded object-cover img-fluid">
-                                <div class="stories-data ms-3">
-                                    <h6 class="font-size-14">Pete Sariya <span class="text-body fw-normal">voted for
-                                        </span>combination of colors from your brand palette</h6>
-                                    <small class="text-capitalize">1 month ago</small>
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <img src="{{ asset('/images/gym(4).jpg') }}" alt="story-img"
-                                    class="avatar-32 avatar-rounded object-cover img-fluid">
-                                <div class="stories-data ms-3">
-                                    <h6 class="font-size-14">Dima Davydov <span class="text-body fw-normal">replied to
-                                            your
-                                            comment</span></h6>
-                                    <small class="text-capitalize">1 month ago</small>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-        </div>
             </div>
         </div>
-    <!-- </div> -->
-    <!-- Like Modal -->
-    <div class="modal fade likemodal" id="likemodal" tabindex="-1" aria-labelledby="likemodalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <ul class="nav nav-tabs liked-tabs" id="liked-tabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <span class="nav-link active" id="reaction-tab-1" data-bs-toggle="tab"
-                                data-bs-target="#reaction-tab-all" type="button" role="tab"
-                                aria-controls="reaction-tab-all" aria-selected="true">
-                                <span class="align-middle">All</span>
-                            </span>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <span class="nav-link" id="reaction-tab-2" data-bs-toggle="tab"
-                                data-bs-target="#reaction-tab-like" type="button" role="tab"
-                                aria-controls="reaction-tab-like" aria-selected="false">
-                                <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img" alt="like"
-                                    loading="lazy">
-                                <span class="align-middle">2</span>
-                            </span>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <span class="nav-link" id="reaction-tab-3" data-bs-toggle="tab"
-                                data-bs-target="#reaction-tab-love" type="button" role="tab"
-                                aria-controls="reaction-tab-love" aria-selected="false">
-                                <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img" alt="love"
-                                    loading="lazy">
-                                <span class="align-middle">3</span>
-                            </span>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <span class="nav-link" id="reaction-tab-4" data-bs-toggle="tab"
-                                data-bs-target="#reaction-tab-happy" type="button" role="tab"
-                                aria-controls="reaction-tab-happy" aria-selected="false">
-                                <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img" alt="happy"
-                                    loading="lazy">
-                                <span class="align-middle">3</span>
-                            </span>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <span class="nav-link" id="reaction-tab-5" data-bs-toggle="tab"
-                                data-bs-target="#reaction-tab-haha" type="button" role="tab"
-                                aria-controls="reaction-tab-haha" aria-selected="false">
-                                <img src="{{ asset('/images/icon/04.png') }}" class="img-fluid reaction-img" alt="haha"
-                                    loading="lazy">
-                                <span class="align-middle">1</span>
-                            </span>
-                        </li>
-                    </ul>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="tab-content liked-tabs-content" id="liked-tabs-content">
-                        <div class="tab-pane fade show active" id="reaction-tab-all" role="tabpanel"
-                            aria-labelledby="reaction-tab-1" tabindex="0">
-                            <ul class="list-inline m-0 p-0">
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/01.jpg') }}" alt="user" loading="lazy">
+        <!-- </div> -->
+        <!-- Like Modal -->
+        <div class="modal fade likemodal" id="likemodal" tabindex="-1" aria-labelledby="likemodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <ul class="nav nav-tabs liked-tabs" id="liked-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <span class="nav-link active" id="reaction-tab-1" data-bs-toggle="tab"
+                                    data-bs-target="#reaction-tab-all" type="button" role="tab"
+                                    aria-controls="reaction-tab-all" aria-selected="true">
+                                    <span class="align-middle">All</span>
+                                </span>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <span class="nav-link" id="reaction-tab-2" data-bs-toggle="tab"
+                                    data-bs-target="#reaction-tab-like" type="button" role="tab"
+                                    aria-controls="reaction-tab-like" aria-selected="false">
+                                    <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img" alt="like"
+                                        loading="lazy">
+                                    <span class="align-middle">2</span>
+                                </span>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <span class="nav-link" id="reaction-tab-3" data-bs-toggle="tab"
+                                    data-bs-target="#reaction-tab-love" type="button" role="tab"
+                                    aria-controls="reaction-tab-love" aria-selected="false">
+                                    <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img" alt="love"
+                                        loading="lazy">
+                                    <span class="align-middle">3</span>
+                                </span>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <span class="nav-link" id="reaction-tab-4" data-bs-toggle="tab"
+                                    data-bs-target="#reaction-tab-happy" type="button" role="tab"
+                                    aria-controls="reaction-tab-happy" aria-selected="false">
+                                    <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img" alt="happy"
+                                        loading="lazy">
+                                    <span class="align-middle">3</span>
+                                </span>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <span class="nav-link" id="reaction-tab-5" data-bs-toggle="tab"
+                                    data-bs-target="#reaction-tab-haha" type="button" role="tab"
+                                    aria-controls="reaction-tab-haha" aria-selected="false">
+                                    <img src="{{ asset('/images/icon/04.png') }}" class="img-fluid reaction-img" alt="haha"
+                                        loading="lazy">
+                                    <span class="align-middle">1</span>
+                                </span>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="tab-content liked-tabs-content" id="liked-tabs-content">
+                            <div class="tab-pane fade show active" id="reaction-tab-all" role="tabpanel"
+                                aria-labelledby="reaction-tab-1" tabindex="0">
+                                <ul class="list-inline m-0 p-0">
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/01.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Anna Sthesia</h6>
+                                                    <span>@anna</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Anna Sthesia</h6>
-                                                <span>@anna</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
-                                                alt="like" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/02.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Paul Molive</h6>
-                                                <span>@paul</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
+                                                    alt="like" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
-                                                alt="like" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/03.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/02.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Paul Molive</h6>
+                                                    <span>@paul</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Anna Mull</h6>
-                                                <span>@annamull</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
-                                                alt="love" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/04.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Paige Turner</h6>
-                                                <span>@paige</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
+                                                    alt="like" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
-                                                alt="love" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/11.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/03.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Anna Mull</h6>
+                                                    <span>@annamull</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Bob Frapples</h6>
-                                                <span>@bob</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
-                                                alt="love" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/12.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Ira Membrit</h6>
-                                                <span>@ira</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
+                                                    alt="love" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
-                                                alt="happy" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/13.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/04.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Paige Turner</h6>
+                                                    <span>@paige</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Bob Frapples</h6>
-                                                <span>@bob</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
-                                                alt="happy" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/14.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Greta Life</h6>
-                                                <span>@greta</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
+                                                    alt="love" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
-                                                alt="happy" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src=" {{ asset('/images/user/15.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/11.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Bob Frapples</h6>
+                                                    <span>@bob</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Pete Sariya</h6>
-                                                <span>@pete</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/04.png') }}" class="img-fluid reaction-img"
-                                                alt="haha" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="reaction-tab-like" role="tabpanel"
-                            aria-labelledby="reaction-tab-2" tabindex="0">
-                            <ul class="list-inline m-0 p-0">
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/01.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Anna Sthesia</h6>
-                                                <span>@anna</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
+                                                    alt="love" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
-                                                alt="like" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/02.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/12.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Ira Membrit</h6>
+                                                    <span>@ira</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Paul Molive</h6>
-                                                <span>@paul</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
-                                                alt="like" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="reaction-tab-love" role="tabpanel"
-                            aria-labelledby="reaction-tab-3" tabindex="0">
-                            <ul class="list-inline m-0 p-0">
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/03.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Anna Mull</h6>
-                                                <span>@annamull</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
+                                                    alt="happy" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
-                                                alt="love" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/04.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/13.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Bob Frapples</h6>
+                                                    <span>@bob</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Paige Turner</h6>
-                                                <span>@paige</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
-                                                alt="love" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/11.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Bob Frapples</h6>
-                                                <span>@bob</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
+                                                    alt="happy" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
-                                                alt="love" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="reaction-tab-happy" role="tabpanel"
-                            aria-labelledby="reaction-tab-4" tabindex="0">
-                            <ul class="list-inline m-0 p-0">
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/12.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/14.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Greta Life</h6>
+                                                    <span>@greta</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Ira Membrit</h6>
-                                                <span>@ira</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
+                                                    alt="happy" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
-                                                alt="happy" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/13.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src=" {{ asset('/images/user/15.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Pete Sariya</h6>
+                                                    <span>@pete</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Bob Frapples</h6>
-                                                <span>@bob</span>
-                                            </div>
-                                        </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
-                                                alt="happy" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/14.jpg') }}" alt="user" loading="lazy">
-                                            </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Greta Life</h6>
-                                                <span>@greta</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/04.png') }}" class="img-fluid reaction-img"
+                                                    alt="haha" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
-                                                alt="happy" loading="lazy">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="reaction-tab-haha" role="tabpanel"
-                            aria-labelledby="reaction-tab-5" tabindex="0">
-                            <ul class="list-inline m-0 p-0">
-                                <li>
-                                    <div
-                                        class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
-                                        <div class="d-flex align-items-center gap-3 flex-shrnik-0">
-                                            <div class="reaction-user-image flex-shrnik-0">
-                                                <img class="border border-2 rounded-circle avatar-50"
-                                                    src="{{ asset('/images/user/15.jpg') }}" alt="user" loading="lazy">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="reaction-tab-like" role="tabpanel"
+                                aria-labelledby="reaction-tab-2" tabindex="0">
+                                <ul class="list-inline m-0 p-0">
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/01.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Anna Sthesia</h6>
+                                                    <span>@anna</span>
+                                                </div>
                                             </div>
-                                            <div class="reaction-user-meta">
-                                                <h6 class="mb-0">Pete Sariya</h6>
-                                                <span>@pete</span>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
+                                                    alt="like" loading="lazy">
                                             </div>
                                         </div>
-                                        <div class="reaction flex-shrnik-0">
-                                            <img src="{{ asset('/images/icon/04.png') }}" class="img-fluid reaction-img"
-                                                alt="haha" loading="lazy">
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/02.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Paul Molive</h6>
+                                                    <span>@paul</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/01.png') }}" class="img-fluid reaction-img"
+                                                    alt="like" loading="lazy">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="reaction-tab-love" role="tabpanel"
+                                aria-labelledby="reaction-tab-3" tabindex="0">
+                                <ul class="list-inline m-0 p-0">
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/03.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Anna Mull</h6>
+                                                    <span>@annamull</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
+                                                    alt="love" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/04.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Paige Turner</h6>
+                                                    <span>@paige</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
+                                                    alt="love" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/11.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Bob Frapples</h6>
+                                                    <span>@bob</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/02.png') }}" class="img-fluid reaction-img"
+                                                    alt="love" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="reaction-tab-happy" role="tabpanel"
+                                aria-labelledby="reaction-tab-4" tabindex="0">
+                                <ul class="list-inline m-0 p-0">
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/12.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Ira Membrit</h6>
+                                                    <span>@ira</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
+                                                    alt="happy" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/13.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Bob Frapples</h6>
+                                                    <span>@bob</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
+                                                    alt="happy" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/14.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Greta Life</h6>
+                                                    <span>@greta</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/03.png') }}" class="img-fluid reaction-img"
+                                                    alt="happy" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="reaction-tab-haha" role="tabpanel"
+                                aria-labelledby="reaction-tab-5" tabindex="0">
+                                <ul class="list-inline m-0 p-0">
+                                    <li>
+                                        <div
+                                            class="reaction-user-container d-flex align-items-center justify-content-between gap-3">
+                                            <div class="d-flex align-items-center gap-3 flex-shrnik-0">
+                                                <div class="reaction-user-image flex-shrnik-0">
+                                                    <img class="border border-2 rounded-circle avatar-50"
+                                                        src="{{ asset('/images/user/15.jpg') }}" alt="user" loading="lazy">
+                                                </div>
+                                                <div class="reaction-user-meta">
+                                                    <h6 class="mb-0">Pete Sariya</h6>
+                                                    <span>@pete</span>
+                                                </div>
+                                            </div>
+                                            <div class="reaction flex-shrnik-0">
+                                                <img src="{{ asset('/images/icon/04.png') }}" class="img-fluid reaction-img"
+                                                    alt="haha" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

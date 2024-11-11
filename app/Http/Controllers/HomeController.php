@@ -23,6 +23,10 @@ class HomeController extends Controller
     {
         return view('dashboards.index');
     }
+    public function equitycircle(Request $request){
+        return view('dashboards.equitycircle');
+    }
+
     public function newsfeed(Request $request)
     {
         return view('dashboards.newsfeed');

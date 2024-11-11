@@ -26,6 +26,8 @@ Route::get('/dashboard', function () {
   return view('dashboard');
 })->middleware(['auth'])->name('index');
 
+Route::get('/equity-circle', [HomeController::class, 'equitycircle'])->name('equity_circle');
+
 Route::get('userlist', [HomeController::class, 'userlist'])->name('userlist');
 Route::group(['middleware' => 'auth'], function () {
 

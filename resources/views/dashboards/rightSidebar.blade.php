@@ -1,5 +1,5 @@
 <div class="right-sidebar-mini right-sidebar">
-    <div class="right-sidebar-panel p-0">
+    <div class="right-sidebar-panel p-0 ">
        <div class="card shadow-none m-0 h-100">
           <div class="card-body px-0 pt-0">
              <div class="p-4">

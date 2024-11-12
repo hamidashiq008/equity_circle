@@ -166,63 +166,63 @@ Index Of Script
       /*---------------------------------------------------------------------
          Sidebar Toggle
       -----------------------------------------------------------------------*/
-      function updateSidebarType() {
-        if (typeof IQSetting !== typeof undefined) {
-          const sidebarType = IQSetting.options.setting.sidebar_type.value;
-          const newTypes = sidebarType;
-          if (sidebarType.includes("sidebar-mini")) {
-            const indexOf = newTypes.findIndex((x) => x == "sidebar-mini");
-            newTypes.splice(indexOf, 1);
-          } else {
-            newTypes.push("sidebar-mini");
-          }
-          IQSetting.sidebar_type(newTypes);
-        }
-      }
-      const sidebarToggle = (elem) => {
-        elem.addEventListener("click", (e) => {
-          const sidebar = document.querySelector(".sidebar");
-          if (sidebar.classList.contains("sidebar-mini")) {
-            sidebar.classList.remove("sidebar-mini");
-            updateSidebarType();
-          } else {
-            sidebar.classList.add("sidebar-mini");
-            updateSidebarType();
-          }
-          const sidebarMini = document.getElementsByTagName("ASIDE")[0];
-    if (sidebarMini.classList.contains('sidebar-mini')) {
-      sidebarMini.classList.remove('sidebar-mini')
-    }
-    else {
-      sidebarMini.classList.add('sidebar-mini')
-    }
-        });
-      };
-      jQuery(document).on("click", '[data-toggle="sidebar"]', function () {
-        jQuery("body").toggleClass("sidebar-main");
-        jQuery(this).toggleClass("mini");
-      });
-      const sidebarToggleBtn = document.querySelectorAll(
-        '[data-toggle="sidebar"]'
-      );
-      const sidebar = document.querySelector('[data-toggle="main-sidebar"]');
-      if (sidebar !== null) {
-        const sidebarActiveItem = sidebar.querySelectorAll(".active");
-        Array.from(sidebarActiveItem, (elem) => {
-          elem.classList.add("active");
-          if (!elem.closest("ul").classList.contains("iq-main-menu")) {
-            const childMenu = elem.closest("ul");
-            const parentMenu = childMenu.closest("li").querySelector(".nav-link");
-            parentMenu.classList.add("active");
-            new bootstrap.Collapse(childMenu, {
-              toggle: true,
-            });
-          }
-        });
-      }
-      Array.from(sidebarToggleBtn, (sidebarBtn) => {
-        sidebarToggle(sidebarBtn);
-      });
+    //   function updateSidebarType() {
+    //     if (typeof IQSetting !== typeof undefined) {
+    //       const sidebarType = IQSetting.options.setting.sidebar_type.value;
+    //       const newTypes = sidebarType;
+    //       if (sidebarType.includes("sidebar-mini")) {
+    //         const indexOf = newTypes.findIndex((x) => x == "sidebar-mini");
+    //         newTypes.splice(indexOf, 1);
+    //       } else {
+    //         newTypes.push("sidebar-mini");
+    //       }
+    //       IQSetting.sidebar_type(newTypes);
+    //     }
+    //   }
+    //   const sidebarToggle = (elem) => {
+    //     elem.addEventListener("click", (e) => {
+    //       const sidebar = document.querySelector(".sidebar");
+    //       if (sidebar.classList.contains("sidebar-mini")) {
+    //         sidebar.classList.remove("sidebar-mini");
+    //         updateSidebarType();
+    //       } else {
+    //         sidebar.classList.add("sidebar-mini");
+    //         updateSidebarType();
+    //       }
+    //       const sidebarMini = document.getElementsByTagName("ASIDE")[0];
+    // if (sidebarMini.classList.contains('sidebar-mini')) {
+    //   sidebarMini.classList.remove('sidebar-mini')
+    // }
+    // else {
+    //   sidebarMini.classList.add('sidebar-mini')
+    // }
+    //     });
+    //   };
+    //   jQuery(document).on("click", '[data-toggle="sidebar"]', function () {
+    //     jQuery("body").toggleClass("sidebar-main");
+    //     jQuery(this).toggleClass("mini");
+    //   });
+    //   const sidebarToggleBtn = document.querySelectorAll(
+    //     '[data-toggle="sidebar"]'
+    //   );
+    //   const sidebar = document.querySelector('[data-toggle="main-sidebar"]');
+    //   if (sidebar !== null) {
+    //     const sidebarActiveItem = sidebar.querySelectorAll(".active");
+    //     Array.from(sidebarActiveItem, (elem) => {
+    //       elem.classList.add("active");
+    //       if (!elem.closest("ul").classList.contains("iq-main-menu")) {
+    //         const childMenu = elem.closest("ul");
+    //         const parentMenu = childMenu.closest("li").querySelector(".nav-link");
+    //         parentMenu.classList.add("active");
+    //         new bootstrap.Collapse(childMenu, {
+    //           toggle: true,
+    //         });
+    //       }
+    //     });
+    //   }
+    //   Array.from(sidebarToggleBtn, (sidebarBtn) => {
+    //     sidebarToggle(sidebarBtn);
+    //   });
 
       /*---------------------------------------------------------------------
                   Sidebar Left Active Border
@@ -1457,3 +1457,8 @@ Index Of Script
 
 
   })(jQuery);
+
+
+function leftSideBar(){
+  $('.leftSideBar').toggleClass('sidebar-mini');
+}

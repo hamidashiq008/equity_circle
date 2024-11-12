@@ -9,7 +9,7 @@
 
     @include('partials._head')
 </head>
-<body class="{{ isset($bodyClass) ? $bodyClass : '' }}">
+<body class="{{ isset($bodyClass) ? $bodyClass : '' }} sidebar-main">
 @include('partials._body')
 </body>
 </html>

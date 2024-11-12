@@ -32,6 +32,9 @@ Route::get('/education', [HomeController::class, 'education'])->name('education'
 Route::get('/job-list', [HomeController::class, 'jobList'])->name('job-list');
 Route::get('/event-calender', [HomeController::class, 'eventCalender'])->name('event-calender');
 
+
+Route::get('/jobs/search-job', [HomeController::class, 'searchJob'])->name('search-job');
+
 Route::get('userlist', [HomeController::class, 'userlist'])->name('userlist');
 Route::group(['middleware' => 'auth'], function () {
 

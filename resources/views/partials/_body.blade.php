@@ -4,28 +4,33 @@
 </div>
 <!-- loader END -->
 <!-- Wrapper Start -->
-@include('dashboards.static-banner')
+@php
+    if (Route::currentRouteName() == 'equity_circle') {
+        @endphp
+        @include('dashboards.static-banner');
+        @php
+    }
 
-@include('partials._body_header')
+    if (Route::currentRouteName() != 'search-job') {
+        @endphp
+        @include('partials._body_header')
+        @php
+    }
+@endphp
+
 
 <main class="main-content">
     <div class="position-relative">
-       {{-- {{$pageheader ?? ''}} --}}
-        {{-- @include('partials._body_header')  --}}
-
-       <div>
-       <div class="position-relative">
-        @if (isset($isSubheader) && $isSubheader)
-            {{$header}}
-        @endif
-      </div>
-
-    <div id="content-page " class="content-inner ">
-        {{ $slot }}
-    </div>
+        <div>
+            <div class="position-relative">
+                @if (isset($isSubheader) && $isSubheader)
+                    {{$header}}
+                @endif
+            </div>
+            <div id="content-page " class="content-inner ">
+                {{ $slot }}
+            </div>
        </div>
-    {{-- @include('dashboards.modal') 
-    @include('dashboards.rightSidebar')  --}}
     </div>
 </main>
 <!-- Wrapper End-->

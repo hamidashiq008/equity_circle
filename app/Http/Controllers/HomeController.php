@@ -38,6 +38,10 @@ class HomeController extends Controller
     public function eventCalender(Request $request){
         return view('dashboards.eventcalender');
     }
+
+    public function searchJob(Request $request){
+        return view('dashboards.jobs.search-Job');
+    }
     
 
     public function newsfeed(Request $request)

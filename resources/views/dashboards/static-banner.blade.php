@@ -13,7 +13,7 @@
         overflow-x: scroll !important;
     }
     
-    ::-webkit-scrollbar {
+    .banner-section::-webkit-scrollbar {
         width: 0px;
         height: 0px;
     }
@@ -28,7 +28,6 @@
     }
     
     body{
-        /* overflow-y: hidden; */
         overflow-x: hidden;
     }
     

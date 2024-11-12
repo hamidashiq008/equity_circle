@@ -15786,9 +15786,9 @@ nav .nav-item input.form-control {
     width: 18px
 }
 
-.card {
+/* .card {
     margin-bottom: 1.5rem
-}
+} */
 
 .card .card-header {
     align-items: center!important;
@@ -15896,11 +15896,11 @@ nav .nav-item input.form-control {
 .right-sidebar-mini {
     bottom: 0;
     position: absolute;
-    right: 0;
+    right: 6px;
     top: 4.5rem;
     transform: translateX(calc(111% - 2em));
     transition: all .3s ease-in-out;
-    width: 350px;
+    width: 330px;
     z-index: 100;
     z-index: 1
 }
@@ -23350,7 +23350,10 @@ body.uikit .btn-download {
 }
 
 .sidebar .data-scrollbar {
-    max-height: 92vh
+    max-height: 92vh;
+    height: 92vh;
+    overflow: auto !important;
+    outline: unset !important;
 }
 
 .sidebar .sidebar-header {
@@ -23555,6 +23558,18 @@ body {
     --sidebar-transition-function-ease-in-out: ease-in-out
 }
 
+@media(max-width: 1749px){
+    body{
+        --sidebar-width: 310px;
+    }
+}
+
+@media(max-width: 1599px){
+    body{
+        --sidebar-width: 280px;
+    }
+}
+
 @media (max-width: 1199px) {
     .sidebar {
         z-index:11111
@@ -23676,7 +23691,7 @@ body {
 }
 
 .sidebar.sidebar-mini {
-    --sidebar-width: 5rem
+    /* --sidebar-width: 5rem */
 }
 
 .sidebar.sidebar-mini+.main-content {
@@ -23715,8 +23730,8 @@ body {
 }
 
 .sidebar.sidebar-mini.sidebar-base:not(.sidebar-hover:hover) .nav-item .nav-link:not(.static-item) span {
-    opacity: 0;
-    transform: translateX(-100%) scale(0);
+    /* opacity: 0;
+    transform: translateX(-100%) scale(0); */
     transition: background-color .4s ease-in-out,color .4s ease-in-out,border-radius .4s ease-in-out,transform .4s ease-in-out,opacity .4s ease-in-out
 }
 
@@ -29358,19 +29373,115 @@ a:hover {
     margin: 0px !important;
 }
 
-.custom-container{
-    width: calc(100% - 400px);
+.custom-container-equity{
+    width: calc(100% - 250px);
     margin: 20px auto;
 }
 
-@media(max-width: 1025px){
+.custom-container-card{
+    width: calc(100% - 150px);
+    margin: 0px auto 40px;
+}
+
+@media(max-width: 1750px){
     .main-content{
-        padding-left: 0px !important;
+        padding-left: 310px !important;
+        padding-right: 330px !important;
         margin: 0px !important;
     }
+}
+
+@media(max-width: 1599px){
+    .main-content{
+        padding-left: 280px !important;
+        padding-right: 0px !important;
+        margin: 0px !important;
+    }
+    .custom-container-equity{
+        width: calc(100% - 150px);
+        margin: 0px auto 40px;
+    }
+    .custom-container-card{
+        width: calc(100% - 150px);
+        margin: 0px auto 40px;
+    }
+}
+
+@media(max-width: 1199px){
+    .custom-container-equity{
+        width: calc(100% - 80px);
+        margin: 0px auto 40px;
+    }
+    .custom-container-card{
+        width: calc(100% - 80px);
+        margin: 0px auto 40px;
+    }
     .sidebar{
-        top: 67px;
+        top: 66px;
         background: #fff !important;
         height: 92vh;
     }
+    .main-content{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        margin: 0px !important;
+    }
+}
+
+@media(max-width: 768px){
+    .custom-container-equity{
+        width: calc(100% - 0px);
+        margin: 20px auto;
+    }
+    
+    .custom-container-card{
+        width: calc(100% - 0px);
+        margin: 0px auto 40px;
+    }
+}
+
+.edu-card-img{
+    height: 160px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.job-card-img{
+    height: 160px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+@media(max-width: 575px){
+    .edu-card-img{
+        height: 240px;
+    }
+    .job-card-img{
+        height: 240px;
+    }
+}
+
+
+.turncate-2{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.turncate-3{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+body{
+    overflow-x: hidden;
 }

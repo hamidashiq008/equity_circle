@@ -51,7 +51,7 @@
                 </div>
               </div>
             </div>
-            <div class="iq-search-bar device-search position-relative d-none d-lg-block">
+            <!-- <div class="iq-search-bar device-search position-relative d-none d-lg-block">
               <form action="#" class="searchbox open-modal-search">
                 <a class="search-link" href="javascript:void(0);">
                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +191,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <ul class="navbar-nav navbar-list">

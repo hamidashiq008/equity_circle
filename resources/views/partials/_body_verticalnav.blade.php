@@ -7,8 +7,8 @@
         </a>
     </li> --}}
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page"
-            href="#">
+
+        <a class="nav-link  {{activeRoute(route('equity_circle'))}}" aria-current="page"  href="{{route('equity_circle')}}">
             <i class="icon material-symbols-outlined">
                 Home
             </i>
@@ -16,8 +16,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('index'))}}" aria-current="page"
-            href="#">
+        <a class="nav-link  {{activeRoute(route('profiles'))}}" href="{{route('profiles')}}" aria-current="page">
             <i class="icon material-symbols-outlined">
                 person
             </i>
@@ -77,8 +76,8 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('index'))}}" aria-current="page"
-            href="#">
+        <a class="nav-link {{activeRoute(route('education'))}}" aria-current="page"
+        href="{{route('education')}}">
             <i class="icon material-symbols-outlined">
                 school
             </i>
@@ -86,8 +85,8 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('index'))}}" aria-current="page"
-            href="#">
+        <a class="nav-link {{activeRoute(route('job-list'))}}" aria-current="page"
+        href="{{route('job-list')}}">
             <i class="icon material-symbols-outlined">
                 text_snippet
             </i>
@@ -95,8 +94,8 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('index'))}}" aria-current="page"
-            href="#">
+        <a class="nav-link {{activeRoute(route('event-calender'))}}" aria-current="page"
+        href="{{route('event-calender')}}">
             <i class="icon material-symbols-outlined">
                 calendar_month
             </i>
@@ -112,5 +111,7 @@
             <span class="item-name">Notifications</span>
         </a>
     </li>
+             
 </ul>
-<!-- Sidebar Menu End -->
+                          
+

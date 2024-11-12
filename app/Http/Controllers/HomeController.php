@@ -26,6 +26,19 @@ class HomeController extends Controller
     public function equitycircle(Request $request){
         return view('dashboards.equitycircle');
     }
+    public function profiles(Request $request){
+        return view('dashboards.profiles');
+    }
+    public function education(Request $request){
+        return view('dashboards.education');
+    }
+    public function jobList(Request $request){
+        return view('dashboards.joblist');
+    }
+    public function eventCalender(Request $request){
+        return view('dashboards.eventcalender');
+    }
+    
 
     public function newsfeed(Request $request)
     {

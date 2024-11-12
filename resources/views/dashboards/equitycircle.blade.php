@@ -3360,6 +3360,8 @@
                 </div>
             </div>
         </div>
+
+     
     </div>
     @include('components.shareoffcanvas')
 </x-app-layout>

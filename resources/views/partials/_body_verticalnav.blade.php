@@ -7,7 +7,7 @@
         </a>
     </li> --}}
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('index'))}}" aria-current="page"
+        <a class="nav-link active" aria-current="page"
             href="#">
             <i class="icon material-symbols-outlined">
                 Home

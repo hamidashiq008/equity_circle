@@ -4390,7 +4390,8 @@ textarea.form-control-lg {
     flex-direction: column;
     list-style: none;
     margin-bottom: 0;
-    padding-left: 0
+    padding-left: 0;
+    padding-top: 15px;
 }
 
 .navbar-nav .nav-link.active,.navbar-nav .nav-link.show {
@@ -15894,12 +15895,12 @@ nav .nav-item input.form-control {
 
 .right-sidebar-mini {
     bottom: 0;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 4.5rem;
     transform: translateX(calc(111% - 2em));
     transition: all .3s ease-in-out;
-    width: 18.75rem;
+    width: 350px;
     z-index: 100;
     z-index: 1
 }
@@ -15968,7 +15969,7 @@ nav .nav-item input.form-control {
 .right-sidebar-mini .card .card-body .conversion-button {
     bottom: 0;
     left: 0;
-    position: absolute;
+    position: static;
     width: 100%;
     z-index: 1
 }
@@ -23547,7 +23548,7 @@ body.uikit .btn-download {
 }
 
 body {
-    --sidebar-width: 15.625rem;
+    --sidebar-width: 350px;
     --sidebar-transition: all 400ms ease;
     --sidebar-transition-duration: 400ms;
     --sidebar-transition-function-ease: ease;
@@ -29352,8 +29353,14 @@ a:hover {
 
 
 .main-content{
-    padding-left: 250px !important;
+    padding-left: 350px !important;
+    padding-right: 350px !important;
     margin: 0px !important;
+}
+
+.custom-container{
+    width: calc(100% - 400px);
+    margin: 20px auto;
 }
 
 @media(max-width: 1025px){

@@ -33,7 +33,7 @@
                 <div class="offcanvas-body">
                   <ul class="iq-nav-menu list-unstyled">
                     <li class="nav-item ">
-                      <a class="nav-link menu-arrow justify-content-start " href="{{route('index')}}">
+                      <a class="nav-link menu-arrow justify-content-start " href="#">
                         <span class="nav-text">Feed</span>
                       </a>
                     </li>
@@ -716,5 +716,6 @@
       </div>
    </nav>
    @include('partials._body_sidebar')
+   @include('dashboards.rightSidebar')
 </div>
 

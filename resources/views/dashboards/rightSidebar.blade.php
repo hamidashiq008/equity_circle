@@ -223,11 +223,11 @@
                 </div>
              </div>
              <div class="conversion-button">
-                <a href="{{route('chat.index')}}" class="btn btn-primary w-100 py-3 d-block rounded-0">View All Conversion</a>
+                <a href="#" class="btn btn-primary w-100 py-3 d-block rounded-0">View All Conversion</a>
              </div>
-             <div class="right-sidebar-toggle bg-primary text-white mt-3 d-flex">
+             {{-- <div class="right-sidebar-toggle bg-primary text-white mt-3 d-flex">
                 <span class="material-symbols-outlined">chat</span>
-             </div>
+             </div> --}}
           </div>
        </div>
     </div>

@@ -1,3 +1,20 @@
+<style>
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+</style>
 <div class="iq-top-navbar border-bottom">
    <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar p-lg-0">
       <div class="container-fluid navbar-inner">
@@ -19,18 +36,18 @@
                 <div class="offcanvas-body">
                   <ul class="iq-nav-menu list-unstyled">
                     <li class="nav-item ">
-                      <a class="nav-link menu-arrow justify-content-start " href="#">
-                        <span class="nav-text">Feed</span>
+                      <a class="nav-link menu-arrow justify-content-start " href="{{route('bussiness')}}">
+                        <span class="nav-text">Bussiness Managment</span>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link menu-arrow justify-content-start" href="#" data-bs-toggle="collapse" href="#blogData" role="button" aria-expanded="false" aria-controls="blogData">
-                        <span class="nav-text">Fitness</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link menu-arrow justify-content-start" href="#" data-bs-toggle="collapse" href="#storeData" role="button" aria-expanded="false" aria-controls="storeData">
+                      <a class="nav-link menu-arrow justify-content-start " href="{{route('crypto')}}">
                         <span class="nav-text">Crypto</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link menu-arrow justify-content-start " href="{{route('fitness')}}">
+                        <span class="nav-text">Fitness</span>
                       </a>
                     </li>
                   </ul>

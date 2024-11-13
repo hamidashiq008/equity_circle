@@ -33,6 +33,11 @@ Route::get('/job-list', [HomeController::class, 'jobList'])->name('job-list');
 Route::get('/event-calender', [HomeController::class, 'eventCalender'])->name('event-calender');
 
 
+Route::get('/bussiness', [HomeController::class, 'bussiness'])->name('bussiness');
+Route::get('/crypto', [HomeController::class, 'crypto'])->name('crypto');
+Route::get('/fitness', [HomeController::class, 'fitness'])->name('fitness');
+
+
 Route::get('/jobs/search-job', [HomeController::class, 'searchJob'])->name('search-job');
 
 Route::get('userlist', [HomeController::class, 'userlist'])->name('userlist');

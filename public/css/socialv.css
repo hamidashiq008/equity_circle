@@ -29485,3 +29485,49 @@ a:hover {
 body{
     overflow-x: hidden;
 }
+
+
+.main-inner-wrapper{
+    padding: 2.5rem;
+    .heading-find-more-page{
+        font-weight: 700;
+        font-size: 48px;
+    }
+    .find-more-span{
+        font-size: 20px;
+    }
+    .find-more-right-side,
+    .find-more-left-side{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        overflow: auto;
+    }
+    .find-more-ul-heading{
+        font-size: 28px;
+        font-weight: 600;
+       
+    }
+    .find-more-ul{
+        & li{
+            font-size: 18px !important;
+        }
+    }
+    .image-wrapper{
+     & img{
+        border-radius: 60px;
+     }
+    }
+    .main-inner-wrapper{
+        overflow-y: scroll !important;
+
+    }
+    .find-more-right-side{
+        position: fixed !important;
+        top: 0; 
+        right: 0;
+
+    }
+    
+}

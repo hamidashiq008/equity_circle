@@ -1,6 +1,4 @@
 <x-app-layout :isZuck=true>
-    
-    <!-- <div class="container"> -->
     <div class="container-fluid">
         <div class="custom-container-equity">
             <div id="content">
@@ -1677,5 +1675,4 @@
             </div>
         </div>
     </div>
-    @include('components.shareoffcanvas')
 </x-app-layout>

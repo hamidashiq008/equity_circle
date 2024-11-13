@@ -39,6 +39,18 @@ class HomeController extends Controller
         return view('dashboards.eventcalender');
     }
 
+    public function bussiness(Request $request){
+        return view('dashboards.bussiness');
+    }
+
+    public function crypto(Request $request){
+        return view('dashboards.crypto');
+    }
+
+    public function fitness(Request $request){
+        return view('dashboards.fitness');
+    }
+
     public function searchJob(Request $request){
         return view('dashboards.jobs.search-Job');
     }

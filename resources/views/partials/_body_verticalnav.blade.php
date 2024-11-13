@@ -8,7 +8,7 @@
     </li> --}}
     <li class="nav-item">
 
-        <a class="nav-link  {{activeRoute(route('equity_circle'))}}" aria-current="page"  href="{{route('equity_circle')}}">
+        <a class="nav-link {{activeRoute(route('equity_circle'))}}" aria-current="page"  href="{{route('equity_circle')}}">
             <i class="icon material-symbols-outlined">
                 Home
             </i>
@@ -16,7 +16,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link  {{activeRoute(route('profiles'))}}" href="{{route('profiles')}}" aria-current="page">
+        <a class="nav-link  {{activeRoute(route('profile'))}}" href="{{route('profile')}}" aria-current="page">
             <i class="icon material-symbols-outlined">
                 person
             </i>
@@ -39,27 +39,24 @@
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
                     </i>
-                    <i class="sidenav-mini-icon"> P </i>
                     <span class="item-name"> Bus Dev </span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{activeRoute(route('profile.profile1'))}}"
-                    href="{{route('profile.profile1')}}">
+            <li class="nav-item d-none d-xl-block">
+                <a class="nav-link {{activeRoute(route('crypto'))}}"
+                    href="{{route('crypto')}}">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
                     </i>
-                    <i class="sidenav-mini-icon"> P </i>
                     <span class="item-name">Crypto</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{activeRoute(route('profile.profile2'))}}"
-                    href="{{route('profile.profile2')}}">
+            <li class="nav-item d-none d-xl-block">
+                <a class="nav-link {{activeRoute(route('fitness'))}}"
+                    href="{{route('fitness')}}">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
                     </i>
-                    <i class="sidenav-mini-icon"> P </i>
                     <span class="item-name">Fitness</span>
                 </a>
             </li>
@@ -69,7 +66,6 @@
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
                     </i>
-                    <i class="sidenav-mini-icon"> P </i>
                     <span class="item-name">Mindset</span>
                 </a>
             </li>
@@ -94,12 +90,39 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('event-calender'))}}" aria-current="page"
+        <a class="nav-link {{activeRoute(route('event-calender'))}}" target="_blank" aria-current="page"
         href="{{route('event-calender')}}">
             <i class="icon material-symbols-outlined">
                 calendar_month
             </i>
             <span class="item-name">Events Calender</span>
+        </a>
+    </li>
+    <li class="nav-item d-block d-xl-none">
+        <a class="nav-link {{activeRoute(route('bussiness'))}}" aria-current="page"
+        href="{{route('bussiness')}}">
+            <i class="icon material-symbols-outlined">
+                trending_up
+            </i>
+            <span class="item-name">Bussiness Management</span>
+        </a>
+    </li>
+    <li class="nav-item d-block d-xl-none">
+        <a class="nav-link {{activeRoute(route('crypto'))}}" aria-current="page"
+        href="{{route('crypto')}}">
+            <i class="icon material-symbols-outlined">
+                currency_bitcoin
+            </i>
+            <span class="item-name">Crypto</span>
+        </a>
+    </li>
+    <li class="nav-item d-block d-xl-none">
+        <a class="nav-link {{activeRoute(route('fitness'))}}" aria-current="page"
+        href="{{route('fitness')}}">
+            <i class="icon material-symbols-outlined">
+                exercise
+            </i>
+            <span class="item-name">Fitness</span>
         </a>
     </li>
     <li class="nav-item">

@@ -11,7 +11,7 @@
         @php
     }
 
-    if (Route::currentRouteName() != 'search-job') {
+    if (Route::currentRouteName() != 'search-job' && Route::currentRouteName() != 'event-calender') {
         @endphp
         @include('partials._body_header')
         @php

@@ -171,11 +171,16 @@ class HomeController extends Controller
     {
         return view('blog.bloglist');
     }
+
+    
     public function blogdetail()
     {
         return view('blog.blogdetail');
     }
-
+    public function jobdetail()
+    {
+        return view('dashboards.jobs.job-detail');
+    }
     /*market paages*/
     public function market1()
     {

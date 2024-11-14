@@ -122,6 +122,8 @@ Route::get('tablebasic', [HomeController::class, 'tablebasic'])->name('tablebasi
 Route::get('datatable', [HomeController::class, 'datatable'])->name('datatable');
 Route::get('tableedit', [HomeController::class, 'tableedit'])->name('tableedit');
 Route::get('eventdetail', [HomeController::class, 'eventdetail'])->name('eventdetail');
+Route::get('job-detail', [HomeController::class, 'jobdetail'])->name('job-detail');
+
 
 
 

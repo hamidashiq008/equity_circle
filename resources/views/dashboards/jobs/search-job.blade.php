@@ -24,7 +24,7 @@
                             <li>Know where to find the top L&D resources and useful tools for success</li>
                             <li>Get a bonus customizable 30-60-90 day checklist and template</li>
                         </ul>
-                        <div class="image-wrapper">
+                        <div class="image-wrapper find-more-img-wrp ">
                             <img src="{{ asset('images/image-no-one.jpg') }}" alt="">
                         </div>
                     </div>
@@ -277,6 +277,14 @@
                                 <input id="job-title" type="text" name="job_title" class="form-control mb-0"
                                     placeholder="" required autofocus>
                             </div>
+<div class="check-box-content">
+    <input type="checkbox">
+    <span>
+    Opt in for the latest promotions and events. You may unsubscribe at any time.
+    </span>
+    <p>By filling out this form and clicking submit, you agree to our <a href="#" class="text-decoration-none">privacy policy.</a></p>
+</div>
+
                             <button type="submit" class="btn btn-primary mt-4 fw-semibold text-uppercase w-100">Get
                                 Our Copy</button>
                         </form>

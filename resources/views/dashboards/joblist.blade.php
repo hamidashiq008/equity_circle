@@ -10,7 +10,7 @@
                                 <img src="{{URL::asset('/images/job-img.jpg')}}" class="card-img-top" alt="#" loading="lazy">
                            </div>
                            <div class="card-body">
-                              <h4 class="card-title turncate-2">How a Customer Academy Improves Retention</h4>
+                              <a href="{{route('job-detail')}}" class="card-title turncate-2 job-detail-anchor" >How a Customer Academy Improves Retention</a>
                               <p class="card-text turncate-3">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                               <a href="{{route('search-job')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
                            </div>

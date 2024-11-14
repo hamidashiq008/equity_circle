@@ -26,7 +26,7 @@ Route::get('/dashboard', function () {
   return view('dashboard');
 })->middleware(['auth'])->name('index');
 
-Route::get('/equity-circle', [HomeController::class, 'equitycircle'])->name('equity_circle');
+Route::get('/equity-circle', [HomeController::class, 'equitycircle'])->name('equity-circle');
 Route::get('/profiles', [HomeController::class, 'profiles'])->name('profiles');
 Route::get('/education', [HomeController::class, 'education'])->name('education');
 Route::get('/job-list', [HomeController::class, 'jobList'])->name('job-list');

@@ -23,24 +23,40 @@ class HomeController extends Controller
     {
         return view('dashboards.index');
     }
-    public function equitycircle(Request $request){
-        return view('dashboards.equitycircle');
+    public function equitycircle(Request $request)
+    {
+        $view = 'dashboards.equitycircle';
+        $routeName = 'equity-circle';
+        return view('layouts.dashboard',compact('view','routeName'));
     }
     public function profiles(Request $request){
-        return view('dashboards.profiles');
+        $view = 'dashboards.profiles';
+        $routeName = 'profiles';
+        return view('layouts.dashboard',compact('view','routeName'));
     }
     public function education(Request $request){
-        return view('dashboards.education');
+        $view = 'dashboards.education';
+        $routeName = 'education';
+        return view('layouts.dashboard',compact('view','routeName'));
     }
     public function jobList(Request $request){
-        return view('dashboards.joblist');
+        $view = 'dashboards.joblist';
+        $routeName = 'job-list';
+        return view('layouts.dashboard',compact('view','routeName'));
+        // return view('dashboards.joblist');
     }
     public function eventCalender(Request $request){
-        return view('dashboards.eventcalender');
+        $view = 'dashboards.eventcalender';
+        $routeName = 'event-calender';
+        return view('layouts.dashboard',compact('view','routeName'));
+        // return view('dashboards.eventcalender');
     }
 
     public function searchJob(Request $request){
-        return view('dashboards.jobs.search-Job');
+        $view = 'dashboards.search-Job';
+        $routeName = 'search-Job';
+        return view('layouts.dashboard',compact('view','routeName'));
+        // return view('dashboards.jobs.search-Job');
     }
     
 

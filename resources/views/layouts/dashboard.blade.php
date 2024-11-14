@@ -8,8 +8,22 @@
     <title>Equity Circle</title>
 
     @include('partials._head')
+    @livewireStyles
+    {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
 </head>
 <body class="{{ isset($bodyClass) ? $bodyClass : '' }} sidebar-main">
-@include('partials._body')
+    
+     @include('partials._body')
+
+    @livewireScripts
+    
+    <!-- Your custom script for debugging -->
+    <script>
+        // Listen for the 'changeUrl' event emitted by Livewire
+        Livewire.on('changeUrl', url => {
+            // Update the browser's URL dynamically without reloading the page
+            window.history.pushState({}, '', url);
+        });
+    </script>
 </body>
 </html>

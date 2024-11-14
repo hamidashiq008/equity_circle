@@ -1,4 +1,4 @@
-<x-app-layout :isZuck=true>
+{{-- <x-app-layout :isZuck=true> --}}
     
     <!-- <div class="container"> -->
     <div class="container-fluid">
@@ -1678,4 +1678,4 @@
         </div>
     </div>
     @include('components.shareoffcanvas')
-</x-app-layout>
+{{-- </x-app-layout> --}}

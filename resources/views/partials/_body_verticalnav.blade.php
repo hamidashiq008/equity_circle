@@ -8,7 +8,7 @@
     </li> --}}
     <li class="nav-item">
 
-        <a class="nav-link {{activeRoute(route('equity_circle'))}}" aria-current="page"  href="{{route('equity_circle')}}">
+        <a class="nav-link  {{activeRoute(route('equity-circle'))}}" aria-current="page"   wire:click="triggerNavigateTo('dashboards.equitycircle','equity-circle')">
             <i class="icon material-symbols-outlined">
                 Home
             </i>
@@ -16,13 +16,15 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link  {{activeRoute(route('profile'))}}" href="{{route('profile')}}" aria-current="page">
+        <a class="nav-link {{activeRoute(route('profiles'))}}" wire:click="triggerNavigateTo('dashboards.profiles','profiles')" aria-current="page">
             <i class="icon material-symbols-outlined">
                 person
             </i>
             <span class="item-name">Profiles</span>
         </a>
     </li>
+
+    
     <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#profile" role="button" aria-expanded="false"
             aria-controls="profile">
@@ -72,13 +74,12 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('education'))}}" aria-current="page"
-        href="{{route('education')}}">
-            <i class="icon material-symbols-outlined">
-                school
-            </i>
-            <span class="item-name">Education</span>
-        </a>
+        <a class="nav-link {{activeRoute(route('education'))}}"  wire:click="triggerNavigateTo('dashboards.education','education')" aria-current="page">
+         <i class="icon material-symbols-outlined">
+             school
+         </i>
+         <span class="item-name">Education</span>
+     </a>
     </li>
     <li class="nav-item">
         <a class="nav-link {{activeRoute(route('job-list'))}}" aria-current="page"
@@ -133,8 +134,6 @@
             </span>
             <span class="item-name">Notifications</span>
         </a>
-    </li>
-             
+    </li>        
 </ul>
-                          
 

@@ -1,50 +1,32 @@
-<!-- loader Start -->
-<div id="loading">
-    @include('partials._body_loader')
-</div>
-<!-- loader END -->
-<!-- Wrapper Start -->
-@php
-    if (Route::currentRouteName() == 'equity_circle') {
-        @endphp
-        @include('dashboards.static-banner');
-        @php
-    }
+    <!-- Conditional Banner and Header -->
+    {{-- @if (Route::currentRouteName() == 'equity-circle') --}}
+    <livewire:banner-component :routeName="$routeName" />
+    {{-- @endif --}}
 
-    if (Route::currentRouteName() != 'search-job' && Route::currentRouteName() != 'event-calender') {
-        @endphp
-        @include('partials._body_header')
-        @php
-    }
-@endphp
+    {{-- @if (Route::currentRouteName() != 'search-job')/ --}}
+    <livewire:header-component />
+    {{-- @endif --}}
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="position-relative">
+            <div>
+                <div class="position-relative">
+                    @if (isset($isSubheader) && $isSubheader)
+                        {{ $header }}
+                    @endif
+                </div>
+                <div id="content-page" class="content-inner">
+                    {{-- {{ $slot }} --}}
+                    <livewire:main-content :view="$view" :routeName="$routeName" />
+                </div>
+           </div>
+        </div>
+    </main>
+
+    <!-- Footer & Sidebar (conditionally included) -->
+    {{-- @include('partials.modal-view')
+    @include('partials._scripts')
+    @include('dashboards._app_toast') --}}
 
 
-<main class="main-content">
-    <div class="position-relative">
-        <div>
-            <div class="position-relative">
-                @if (isset($isSubheader) && $isSubheader)
-                    {{$header}}
-                @endif
-            </div>
-            <div id="content-page " class="content-inner ">
-                {{ $slot }}
-            </div>
-       </div>
-    </div>
-</main>
-<!-- Wrapper End-->
- {{-- @include('partials._body_footer')  --}}
- {{-- offcanvas start --> --}}
-{{-- @include('dashboards.rightSidebar') --}}
-<!-- Live Customizer start -->
- {{-- @include('components.setting-offcanvas')  --}}
-<!-- Live Customizer end -->
-
- {{-- @include('components.shareoffcanvas')  --}}
-
-<!-- Ajax Modal Html-->
-@include('partials.modal-view')
-
-@include('partials._scripts')
-@include('dashboards._app_toast')

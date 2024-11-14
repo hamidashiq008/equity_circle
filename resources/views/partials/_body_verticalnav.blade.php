@@ -82,8 +82,8 @@
      </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('job-list'))}}" aria-current="page"
-        href="{{route('job-list')}}">
+        <a class="nav-link {{activeRoute(route('joblist'))}}" aria-current="page"
+        wire:click="triggerNavigateTo('dashboards.joblist','joblist')">
             <i class="icon material-symbols-outlined">
                 text_snippet
             </i>

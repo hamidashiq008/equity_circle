@@ -39,11 +39,11 @@ class HomeController extends Controller
         $routeName = 'education';
         return view('layouts.dashboard',compact('view','routeName'));
     }
-    public function jobList(Request $request){
+    public function joblist(Request $request){
         $view = 'dashboards.joblist';
-        $routeName = 'job-list';
+        $routeName = 'joblist';
+       
         return view('layouts.dashboard',compact('view','routeName'));
-        // return view('dashboards.joblist');
     }
     public function eventCalender(Request $request){
         $view = 'dashboards.eventcalender';

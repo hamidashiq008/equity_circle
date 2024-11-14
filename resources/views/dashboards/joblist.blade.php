@@ -1,4 +1,3 @@
-<x-app-layout :isZuck=true>
     <div class="container-fluid">
         <div class="custom-container-card">
             <div id="content">
@@ -69,4 +68,3 @@
             </div>
         </div>    
     </div>
-</x-app-layout>

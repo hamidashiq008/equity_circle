@@ -25,8 +25,8 @@
     </main>
 
     <!-- Footer & Sidebar (conditionally included) -->
-    {{-- @include('partials.modal-view')
+    @include('partials.modal-view')
     @include('partials._scripts')
-    @include('dashboards._app_toast') --}}
+    @include('dashboards._app_toast') 
 
 

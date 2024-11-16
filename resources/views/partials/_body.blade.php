@@ -1,6 +1,6 @@
     <!-- Conditional Banner and Header -->
     {{-- @if (Route::currentRouteName() == 'equity-circle') --}}
-    <livewire:banner-component :routeName="$routeName" />
+    {{-- <livewire:banner-component :routeName="$routeName" /> --}}
     {{-- @endif --}}
 
     {{-- @if (Route::currentRouteName() != 'search-job')/ --}}

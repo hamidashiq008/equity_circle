@@ -22,12 +22,14 @@ class MainContent extends Component
     protected $listeners = ['changeContent' => 'loadView'];
 
     // Method to update the current view based on the event payload
-    public function loadView($viewName,$routeName)
+    public function loadView($viewName, $routeName)
     {
-        \Log::info("Event caught: changeContent with viewName: $viewName routeName: $routeName" );
+        \Log::info("Event caught: changeContent with viewName: $viewName and routeName: $routeName");
         $this->view = $viewName;
         $this->routeName = $routeName;
-    }    
+    }
+    
+    
     
     public function render()
     {

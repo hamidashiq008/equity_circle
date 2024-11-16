@@ -662,5 +662,5 @@
       @include('partials._body_sidebar')
       @include('dashboards.rightSidebar')
   </div>
-      
+
 </div>

@@ -14437,7 +14437,7 @@ textarea.form-control-lg {
     display: inline-block;
     left: auto;
     min-height: 3rem;
-    position: sticky;
+    position: fixed;
     right: 0;
     top: 0;
     transition: all .3s ease-in-out;

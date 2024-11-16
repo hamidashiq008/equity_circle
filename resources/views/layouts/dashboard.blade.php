@@ -13,9 +13,9 @@
 </head>
 <body class="{{ isset($bodyClass) ? $bodyClass : '' }} sidebar-main">
     
-     @include('partials._body')
-
+    @include('partials._body')
     @livewireScripts
+
     
     <!-- Your custom script for debugging -->
     <script>

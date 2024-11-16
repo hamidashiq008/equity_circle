@@ -8,7 +8,7 @@
     </li> --}}
     <li class="nav-item">
 
-        <a class="nav-link  {{activeRoute(route('equity-circle'))}}" aria-current="page"   wire:click="triggerNavigateTo('dashboards.equitycircle','equity-circle')">
+        <a class="nav-link  {{activeRoute(route('equity-circle'))}}" aria-current="page"    onclick="Livewire.dispatch('changeContent', ['dashboards.equitycircle', 'equity-circle'])">
             <i class="icon material-symbols-outlined">
                 Home
             </i>
@@ -16,7 +16,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('profiles'))}}" wire:click="triggerNavigateTo('dashboards.profiles','profiles')" aria-current="page">
+        <a class="nav-link {{activeRoute(route('profiles'))}}" onclick="Livewire.dispatch('changeContent', ['dashboards.profiles', 'profiles'])" aria-current="page">
             <i class="icon material-symbols-outlined">
                 person
             </i>
@@ -74,7 +74,7 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('education'))}}"  wire:click="triggerNavigateTo('dashboards.education','education')" aria-current="page">
+        <a class="nav-link {{activeRoute(route('education'))}}"  onclick="Livewire.dispatch('changeContent', ['dashboards.education', 'education'])" aria-current="page">
          <i class="icon material-symbols-outlined">
              school
          </i>
@@ -83,7 +83,7 @@
     </li>
     <li class="nav-item">
         <a class="nav-link {{activeRoute(route('joblist'))}}" aria-current="page"
-        wire:click="triggerNavigateTo('dashboards.joblist','joblist')">
+       onclick="Livewire.dispatch('changeContent', ['dashboards.joblist', 'joblist'])">
             <i class="icon material-symbols-outlined">
                 text_snippet
             </i>

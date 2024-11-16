@@ -1,5 +1,4 @@
 {{-- <x-app-layout :isZuck=true> --}}
-    
     <!-- <div class="container"> -->
     <div class="container-fluid">
         <div class="custom-container-equity">

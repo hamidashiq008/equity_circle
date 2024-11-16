@@ -65,10 +65,9 @@ class HomeController extends Controller
     }
 
     public function searchJob(Request $request){
-        $view = 'dashboards.search-Job';
-        $routeName = 'search-Job';
+        $view = 'dashboards.jobs.search-Job';
+        $routeName = 'search-job';
         return view('layouts.dashboard',compact('view','routeName'));
-        // return view('dashboards.jobs.search-Job');
     }
     
 

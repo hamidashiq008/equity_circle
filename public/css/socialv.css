@@ -29491,10 +29491,10 @@ body{
     padding: 2.5rem;
     .heading-find-more-page{
         font-weight: 700;
-        font-size: 44px;
+        font-size: 48px;
     }
     .find-more-span{
-        font-size: 18px;
+        font-size: 20px;
     }
     .find-more-right-side,
     .find-more-left-side{
@@ -29511,7 +29511,7 @@ body{
     }
     .find-more-ul{
         & li{
-            font-size: 17px !important;
+            font-size: 18px !important;
         }
     }
     .image-wrapper{
@@ -29529,70 +29529,8 @@ body{
         right: 0;
 
     }
-    .find-more-img-wrp{
-        width: 60%;
-        margin: 0 auto;
-        margin-top: 4rem;
-        & img{
-            width: 100%;
-        }
-    }
 }
-@media (max-width: 1301px) {
-    
-    .main-inner-wrapper{
-        padding: 2.5rem;
-        .heading-find-more-page{
-            font-weight: 700;
-            font-size: 34px;
-        }
-        .find-more-span{
-            font-size: 16px;
-        }
-        .find-more-right-side,
-        .find-more-left-side{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            overflow: auto;
-        }
-        .find-more-ul-heading{
-            font-size: 28px;
-            font-weight: 600;
-           
-        }
-        .find-more-ul{
-            & li{
-                font-size: 15px !important;
-            }
-        }
-        .image-wrapper{
-         & img{
-            border-radius: 35px;
-         }
-        }
-        .main-inner-wrapper{
-            overflow-y: scroll !important;
-    
-        }
-        .find-more-right-side{
-            position: fixed !important;
-            top: 0; 
-            right: 0;
-    
-        }
-        .find-more-img-wrp{
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 4rem;
-            & img{
-                width: 100%;
-            }
-        }
-    }
 
-}
 .header-nav{
     width: fit-content;
 }

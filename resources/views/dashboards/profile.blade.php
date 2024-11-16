@@ -1,4 +1,4 @@
-<x-app-layout bodyClass="profile-page">
+{{-- <x-app-layout bodyClass="profile-page"> --}}
     <div class="container position-relative p-0">
         <div class="header-cover-img" style="background-image: url('{{ URL::asset('/images/social-banner.png') }}'); background-size: cover; background-repeat: no-repeat;">
         </div>
@@ -6966,4 +6966,4 @@
         </div>
     </div>
 
-</x-app-layout>
+{{-- </x-app-layout> --}}

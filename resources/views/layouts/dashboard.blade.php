@@ -23,6 +23,7 @@
         Livewire.on('changeUrl', url => {
             // Update the browser's URL dynamically without reloading the page
             window.history.pushState({}, '', url);
+            scrollToTop();
         });
     </script>
 </body>

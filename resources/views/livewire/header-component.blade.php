@@ -12,9 +12,9 @@
                       </svg>
                       <h3 class="logo-title d-none d-sm-block" data-setting="app_name">Equity Circle</h3>
                   </a>
-                  <span class="sidebar-toggle" onclick="leftSideBar()">
-                      <div class="icon material-symbols-outlined iq-burger-menu"> menu </div>
-                  </span>
+                  <span class="sidebar-toggle" onclick="leftSideBarXL()">
+                    <div class="icon material-symbols-outlined iq-burger-menu"> menu </div>
+                </span>
               </div>
   
               <div class="align-items-center h-100 gap-1 d-none d-xl-flex header-nav">

@@ -8,7 +8,7 @@
     </li> --}}
     <li class="nav-item">
 
-        <a class="nav-link  {{activeRoute(route('equity-circle'))}}" aria-current="page" href="{{url('/')}}">
+        <a class="nav-link" aria-current="page" href="{{url('/')}}">
             <i class="icon material-symbols-outlined">
                 Home
             </i>
@@ -16,7 +16,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('profiles'))}}" onclick="Livewire.dispatch('changeContent', ['dashboards.profiles', 'profiles'])" aria-current="page">
+        <a class="nav-link" onclick="Livewire.dispatch('changeContent', ['dashboards.profiles', 'profiles'])" aria-current="page">
             <i class="icon material-symbols-outlined">
                 person
             </i>
@@ -26,7 +26,7 @@
 
     
     <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#profile" role="button" aria-expanded="false"
+        <a class="nav-link" data-bs-toggle="collapse" href="#profile" role="button"
             aria-controls="profile">
             <i class="icon material-symbols-outlined">
                 newspaper
@@ -36,7 +36,7 @@
         </a>
         <ul class="sub-nav collapse" id="profile" data-bs-parent="#sidebar-menu">
             <li class="nav-item">
-                <a class="nav-link {{activeRoute(route('profile'))}}"
+                <a class="nav-link"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.bussiness', 'bussiness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li class="nav-item d-none d-xl-block">
-                <a class="nav-link {{activeRoute(route('crypto'))}}"
+                <a class="nav-link"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.crypto', 'crypto'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li class="nav-item d-none d-xl-block">
-                <a class="nav-link {{activeRoute(route('fitness'))}}"
+                <a class="nav-link"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.fitness', 'fitness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -63,7 +63,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{activeRoute(route('profile.profile3'))}}"
+                <a class="nav-link"
                     href="{{route('profile.profile3')}}">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -74,7 +74,7 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('education'))}}"  onclick="Livewire.dispatch('changeContent', ['dashboards.education', 'education'])" aria-current="page">
+        <a class="nav-link"  onclick="Livewire.dispatch('changeContent', ['dashboards.education', 'education'])" aria-current="page">
          <i class="icon material-symbols-outlined">
              school
          </i>
@@ -82,7 +82,7 @@
      </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('joblist'))}}" aria-current="page"
+        <a class="nav-link " aria-current="page"
        onclick="Livewire.dispatch('changeContent', ['dashboards.joblist', 'joblist'])">
             <i class="icon material-symbols-outlined">
                 text_snippet
@@ -91,7 +91,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('event-calender'))}}" target="_blank" aria-current="page"
+        <a class="nav-link " target="_blank" aria-current="page"
         href="{{route('event-calender')}}">
             <i class="icon material-symbols-outlined">
                 calendar_month
@@ -100,7 +100,7 @@
         </a>
     </li>
     <li class="nav-item d-block d-xl-none">
-        <a class="nav-link {{activeRoute(route('bussiness'))}}" aria-current="page"
+        <a class="nav-link " aria-current="page"
         href="{{route('bussiness')}}">
             <i class="icon material-symbols-outlined">
                 trending_up
@@ -109,7 +109,7 @@
         </a>
     </li>
     <li class="nav-item d-block d-xl-none">
-        <a class="nav-link {{activeRoute(route('crypto'))}}" aria-current="page"
+        <a class="nav-link " aria-current="page"
         href="{{route('crypto')}}">
             <i class="icon material-symbols-outlined">
                 currency_bitcoin
@@ -118,7 +118,7 @@
         </a>
     </li>
     <li class="nav-item d-block d-xl-none">
-        <a class="nav-link {{activeRoute(route('fitness'))}}" aria-current="page"
+        <a class="nav-link " aria-current="page"
         href="{{route('fitness')}}">
             <i class="icon material-symbols-outlined">
                 exercise
@@ -127,7 +127,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {{activeRoute(route('index'))}}" aria-current="page"
+        <a class="nav-link " aria-current="page"
             href="#">
             <span class="material-symbols-outlined position-relative">notifications
                 <span class="bg-primary text-white notification-badge"></span>

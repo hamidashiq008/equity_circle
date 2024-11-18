@@ -15386,7 +15386,6 @@ nav .nav-item input.form-control {
     color: var(--bs-primary);
     cursor: pointer;
     display: flex;
-    display: none;
     height: 26px;
     justify-content: center;
     line-height: 19px;
@@ -15555,7 +15554,6 @@ nav .nav-item input.form-control {
 @media (max-width: 1199.98px) {
     .nav .sidebar-toggle {
         align-items:center;
-        display: block;
         display: flex;
         justify-content: center
     }
@@ -23335,13 +23333,23 @@ body.uikit .btn-download {
     color: var(--bs-primary);
     display: block;
     max-width: var(--sidebar-width);
+    width: 100%;
     position: absolute;
     top: 75px;
     transition: var(--sidebar-transition);
     transition-duration: var(--sidebar-transition-duration);
     transition-timing-function: var(--sidebar-transition-function-ease);
-    width: 100%;
     z-index: 910
+}
+
+
+@media(min-width: 1200px){
+    .sidebar{
+        width: 0px;
+    }
+    .sidebar.sidebar-mini{
+        width: var(--sidebar-width);
+    }
 }
 
 .sidebar .sidebar-body {
@@ -23594,7 +23602,7 @@ body {
 
 .main-content .content-inner {
     min-height: calc(100vh - 6.6rem);
-    padding: 3rem .5rem 0
+    /* padding: 3rem .5rem 0 */
 }
 
 .sidebar+.main-content {
@@ -23628,11 +23636,11 @@ body {
     --shadow-dark-color: var(--bs-primary-rgb)
 }
 
-.sidebar.sidebar-default .nav-link:not(.static-item).active,.sidebar.sidebar-default .nav-link:not(.static-item)[aria-expanded=true] {
+/* .sidebar.sidebar-default .nav-link:not(.static-item).active,.sidebar.sidebar-default .nav-link:not(.static-item)[aria-expanded=true] {
     background: var(--bs-primary);
     box-shadow: 0 10px 20px -10px rgba(var(--shadow-dark-color),38%);
     color: var(--bs-white)
-}
+} */
 
 .sidebar.sidebar-default .nav-link:not(.static-item).active .icon,.sidebar.sidebar-default .nav-link:not(.static-item)[aria-expanded=true] .icon {
     color: var(--bs-white)
@@ -29366,11 +29374,11 @@ a:hover {
     z-index: 2
 }
 
-
 .main-content{
     padding-left: 350px !important;
     padding-right: 350px !important;
     margin: 0px !important;
+    transition: all 0.5s ease-in-out !important;
 }
 
 .custom-container-equity{
@@ -29557,4 +29565,13 @@ body{
 .job-detail-anchor{
     font-size: 21px;
     font-weight: 500;
+}
+
+.main-content{
+    padding-top: 125px !important;
+}
+
+
+.main-content.no-padding{
+    padding-left: 0px !important;
 }

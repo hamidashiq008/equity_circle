@@ -1462,3 +1462,13 @@ Index Of Script
 function leftSideBar(){
   $('.leftSideBar').toggleClass('sidebar-mini');
 }
+
+function leftSideBarXL(){
+  $('.leftSideBar').toggleClass('sidebar-mini');
+  $('.main-content').toggleClass('no-padding');
+}
+
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}

@@ -29553,3 +29553,8 @@ body{
     font-weight: 600;
     border-bottom: 2px solid var(--bs-primary);
 }
+
+.job-detail-anchor{
+    font-size: 21px;
+    font-weight: 500;
+}

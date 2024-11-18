@@ -203,7 +203,9 @@ class HomeController extends Controller
     }
     public function jobdetail()
     {
-        return view('dashboards.jobs.job-detail');
+        $view = 'dashboards.jobs.job-detail';
+        $routeName = 'job-detail';
+        return view('layouts.dashboard',compact('view','routeName'));
     }
     /*market paages*/
     public function market1()

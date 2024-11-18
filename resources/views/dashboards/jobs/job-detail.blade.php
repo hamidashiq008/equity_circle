@@ -1,8 +1,8 @@
-<x-app-layout activelink='blog'>
+
 
         <div class="container">
-               <div class="row">
-                  <div class="col-lg-8">
+               <div class="row" style="margin-top: 3rem !important ; ">
+                  <div class="col-lg-12">
                      <div class="card card-block card-stretch card-height blog blog-detail">
                         <div class="card-body">
                            <div class="image-block">
@@ -31,7 +31,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-12">
                      <div class="card card-block card-stretch card-height blog-post">
                         <div class="card-header d-flex justify-content-between">
                            <div class="header-title">
@@ -39,82 +39,52 @@
                            </div>
                         </div>
                         <div class="card-body pt-0">
-                           <ul class="list-inline p-0 m-0">
+                           <ul class="list-inline p-0 m-0 d-flex">
                               <li class="mb-3">
-                                 <div class="row align-items-top pb-3 border-bottom">
-                                    <div class="col-md-5">
+                                 <div class="row pb-3 ">
+                            
                                        <div class="image-block">
                                           <img src="{{asset('images/blog/03.jpg')}}" class="img-fluid rounded w-100" alt="blog-img">
                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
+                              
+                                
                                        <div class="blog-description mt-1 mt-md-0">
                                           <div class="date mb-1"><a href="#" tabindex="-1">4 Weeks ago</a></div>
                                           <h6>All the Lorem Ipsum generators</h6>
                                        </div>
-                                    </div>
+                                 
                                  </div>
                               </li>
                               <li class="mb-3">
-                                 <div class="row align-items-top pb-3 border-bottom">
-                                    <div class="col-md-5">
+                                 <div class="row pb-3 ">
+                            
                                        <div class="image-block">
-                                          <img src="{{asset('images/blog/04.jpg')}}" class="img-fluid rounded w-100" alt="blog-img">
+                                          <img src="{{asset('images/blog/03.jpg')}}" class="img-fluid rounded w-100" alt="blog-img">
                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
+                              
+                                
                                        <div class="blog-description mt-1 mt-md-0">
-                                          <div class="date mb-1"><a href="#" tabindex="-1">3 Weeks ago</a></div>
+                                          <div class="date mb-1"><a href="#" tabindex="-1">4 Weeks ago</a></div>
                                           <h6>All the Lorem Ipsum generators</h6>
                                        </div>
-                                    </div>
+                                 
                                  </div>
                               </li>
                               <li class="mb-3">
-                                 <div class="row align-items-top pb-3 border-bottom">
-                                    <div class="col-md-5">
+                                 <div class="row pb-3 ">
+                            
                                        <div class="image-block">
-                                          <img src="{{asset('images/blog/05.jpg')}}" class="img-fluid rounded w-100" alt="blog-img">
+                                          <img src="{{asset('images/blog/03.jpg')}}" class="img-fluid rounded w-100" alt="blog-img">
                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
+                              
+                                
                                        <div class="blog-description mt-1 mt-md-0">
-                                          <div class="date mb-1"><a href="#" tabindex="-1">2 Weeks ago</a></div>
+                                          <div class="date mb-1"><a href="#" tabindex="-1">4 Weeks ago</a></div>
                                           <h6>All the Lorem Ipsum generators</h6>
                                        </div>
-                                    </div>
+                                 
                                  </div>
-                              </li>
-                              <li class="mb-3">
-                                 <div class="row align-items-top pb-3 border-bottom">
-                                    <div class="col-md-5">
-                                       <div class="image-block">
-                                          <img src="{{asset('images/blog/06.jpg')}}" class="img-fluid rounded w-100" alt="blog-img">
-                                       </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                       <div class="blog-description mt-1 mt-md-0">
-                                          <div class="date mb-1"><a href="#" tabindex="-1">1 Week ago</a></div>
-                                          <h6>All the Lorem Ipsum generators</h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="mb-3">
-                                 <div class="row align-items-top pb-3 border-bottom">
-                                    <div class="col-md-5">
-                                       <div class="image-block">
-                                          <img src="{{asset('images/blog/07.jpg')}}" class="img-fluid rounded w-100" alt="blog-img">
-                                       </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                       <div class="blog-description mt-1 mt-md-0">
-                                          <div class="date mb-1"><a href="#" tabindex="-1">3 days ago</a></div>
-                                          <h6>All the Lorem Ipsum generators</h6>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </li>
+                              </li>li>
                               <li>
                                  <div class="row align-items-top">
                                     <div class="col-md-5">
@@ -303,4 +273,3 @@
                </div>
             </div>
 
-</x-app-layout>

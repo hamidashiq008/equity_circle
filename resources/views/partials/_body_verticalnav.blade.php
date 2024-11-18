@@ -8,7 +8,7 @@
     </li> --}}
     <li class="nav-item">
 
-        <a class="nav-link  {{activeRoute(route('equity-circle'))}}" aria-current="page"    onclick="Livewire.dispatch('changeContent', ['dashboards.equitycircle', 'equity-circle'])">
+        <a class="nav-link  {{activeRoute(route('equity-circle'))}}" aria-current="page" href="{{url('/')}}">
             <i class="icon material-symbols-outlined">
                 Home
             </i>
@@ -37,7 +37,7 @@
         <ul class="sub-nav collapse" id="profile" data-bs-parent="#sidebar-menu">
             <li class="nav-item">
                 <a class="nav-link {{activeRoute(route('profile'))}}"
-                    href="{{route('profile')}}">
+                onclick="Livewire.dispatch('changeContent', ['dashboards.bussiness', 'bussiness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
                     </i>
@@ -46,7 +46,7 @@
             </li>
             <li class="nav-item d-none d-xl-block">
                 <a class="nav-link {{activeRoute(route('crypto'))}}"
-                    href="{{route('crypto')}}">
+                onclick="Livewire.dispatch('changeContent', ['dashboards.crypto', 'crypto'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
                     </i>
@@ -55,7 +55,7 @@
             </li>
             <li class="nav-item d-none d-xl-block">
                 <a class="nav-link {{activeRoute(route('fitness'))}}"
-                    href="{{route('fitness')}}">
+                onclick="Livewire.dispatch('changeContent', ['dashboards.fitness', 'fitness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
                     </i>

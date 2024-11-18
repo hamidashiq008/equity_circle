@@ -353,16 +353,16 @@
             <div class="image-div position-relative" style="top: 0; left: 0;">
                 <img src="{{asset('images/Banner.jpg')}}" alt="" class="image-wrapper">
                 <div class="links" style="position: absolute; top: 0; left: 0; z-index: 10;">
-                    <a href="{{url('equity-circle')}}"  class="link-item" id="laptop">
+                    <a href="{{url('fitness')}}"  class="link-item" id="laptop">
                         <span class="tooltip">Branded Laptops</span>
                     </a>
-                    <a href="{{url('equity-circle')}}" class="link-item" id="cap">
+                    <a href="{{url('bussiness')}}" class="link-item" id="cap">
                         <span class="tooltip">Lattest Design Caps</span>
                     </a>
-                    <a href="{{url('equity-circle')}}" class="link-item" id="shoes">
+                    <a href="{{url('crypto')}}" class="link-item" id="shoes">
                         <span class="tooltip">Branded Shoes</span>
                     </a>
-                    <a href="{{url('equity-circle')}}" class="link-item" id="cap-2">
+                    <a href="{{url('crypto')}}" class="link-item" id="cap-2">
                         <span class="tooltip">Caps</span>
                     </a>
                 </div>

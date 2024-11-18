@@ -53,19 +53,28 @@ class HomeController extends Controller
     }
 
     public function bussiness(Request $request){
-        return view('dashboards.bussiness');
+        $view = 'dashboards.bussiness';
+        $routeName = 'bussiness';
+        return view('layouts.dashboard',compact('view','routeName'));
+        // return view('dashboards.bussiness');
     }
 
     public function crypto(Request $request){
-        return view('dashboards.crypto');
+        $view = 'dashboards.crypto';
+        $routeName = 'crypto';
+        return view('layouts.dashboard',compact('view','routeName'));
+        // return view('dashboards.crypto');
     }
 
     public function fitness(Request $request){
-        return view('dashboards.fitness');
+        $view = 'dashboards.fitness';
+        $routeName = 'fitness';
+        return view('layouts.dashboard',compact('view','routeName'));
+        // return view('dashboards.fitness');
     }
 
     public function searchJob(Request $request){
-        $view = 'dashboards.jobs.search-Job';
+        $view = 'dashboards.jobs.search-job';
         $routeName = 'search-job';
         return view('layouts.dashboard',compact('view','routeName'));
     }

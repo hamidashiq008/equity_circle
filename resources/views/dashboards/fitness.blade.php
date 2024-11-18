@@ -1,5 +1,5 @@
 
-<x-app-layout :isZuck=true>
+
 
     <div class="container-fluid">
         <div class="custom-container-equity">
@@ -1233,4 +1233,3 @@
             </div>
         </div>
     </div>
-</x-app-layout>

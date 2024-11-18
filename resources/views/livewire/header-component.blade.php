@@ -18,19 +18,19 @@
               </div>
   
               <div class="align-items-center h-100 gap-1 d-none d-xl-flex header-nav">
-                <a class="h-item {{activeRoute(route('bussiness'))}}" href="{{ route('bussiness') }}">
+                <a class="h-item {{activeRoute(route('bussiness'))}}" onclick="Livewire.dispatch('changeContent', ['dashboards.bussiness', 'bussiness'])">
                   <i class="icon material-symbols-outlined">
                     trending_up
                   </i>
                   <span class="nav-text">Bussiness Management</span>
                 </a>
-                <a class="h-item {{activeRoute(route('crypto'))}}" href="{{ route('crypto') }}">
+                <a class="h-item {{activeRoute(route('crypto'))}}" onclick="Livewire.dispatch('changeContent', ['dashboards.crypto', 'crypto'])">
                   <i class="icon material-symbols-outlined">
                     currency_bitcoin
                   </i>
                   <span class="nav-text">Crypto</span>
                 </a>
-                <a class="h-item {{activeRoute(route('fitness'))}}" href="{{ route('fitness') }}">
+                <a class="h-item {{activeRoute(route('fitness'))}}" onclick="Livewire.dispatch('changeContent', ['dashboards.fitness', 'fitness'])">
                   <i class="icon material-symbols-outlined">
                     exercise
                   </i>
@@ -662,5 +662,5 @@
       @include('partials._body_sidebar')
       @include('dashboards.rightSidebar')
   </div>
-      
+
 </div>

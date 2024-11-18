@@ -44,18 +44,29 @@ Route::get('userlist', [HomeController::class, 'userlist'])->name('userlist');
 Route::group(['middleware' => 'auth'], function () {
 
   // Permission Module
-  Route::get('/permission-role', [RolePermission::class, 'index'])->name('permission-role.list');
-  Route::post('/permission-role/store', [RolePermission::class, 'store'])->name('permission-role.store');
-  Route::resource('permission', PermissionController::class);
-  Route::resource('role', RoleController::class);
+  // Route::get('/permission-role', [RolePermission::class, 'index'])->name('permission-role.list');
+  // Route::post('/permission-role/store', [RolePermission::class, 'store'])->name('permission-role.store');
+  // Route::resource('permission', PermissionController::class);
+  // Route::resource('role', RoleController::class);
 
-  Route::resource('/users', UserController::class);
-  Route::get('/changePassword', [UserController::class, 'showchangepasswordget'])->name('changepasswordget');
-  Route::put('/changePassword/{id}', [UserController::class, 'changepasswordpost'])->name('changepasswordpost');
+  // Route::resource('/users', UserController::class);
+  // Route::get('/changePassword', [UserController::class, 'showchangepasswordget'])->name('changepasswordget');
+  // Route::put('/changePassword/{id}', [UserController::class, 'changepasswordpost'])->name('changepasswordpost');
 
-  Route::get('/', [HomeController::class, 'index'])->name('index');
+  // Route::get('/', [HomeController::class, 'index'])->name('index');
 });
 // Dashboard Routes
+Route::get('/permission-role', [RolePermission::class, 'index'])->name('permission-role.list');
+Route::post('/permission-role/store', [RolePermission::class, 'store'])->name('permission-role.store');
+Route::resource('permission', PermissionController::class);
+Route::resource('role', RoleController::class);
+
+Route::resource('/users', UserController::class);
+Route::get('/changePassword', [UserController::class, 'showchangepasswordget'])->name('changepasswordget');
+Route::put('/changePassword/{id}', [UserController::class, 'changepasswordpost'])->name('changepasswordpost');
+
+Route::get('/', [HomeController::class, 'index'])->name('index');
+
 
 Route::get('newsfeed', [HomeController::class, 'newsfeed'])->name('newsfeed');
 Route::get('profile', [HomeController::class, 'profile'])->name('profile');

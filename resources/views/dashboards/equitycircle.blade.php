@@ -1,10 +1,9 @@
 {{-- <x-app-layout :isZuck=true> --}}
-    
     <!-- <div class="container"> -->
     <div class="container-fluid">
         <div class="custom-container-equity">
             <div id="content">
-                <div class="row social-post-container pt-5">
+                <div class="row social-post-container " style="margin-top: 3rem;">
                     <div class="col-sm-12 social-post">
                         <div class="card card-block card-stretch card-height">
                             <div class="card-body">

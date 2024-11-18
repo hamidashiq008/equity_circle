@@ -65,7 +65,7 @@ class HomeController extends Controller
     }
 
     public function searchJob(Request $request){
-        $view = 'dashboards.jobs.search-Job';
+        $view = 'dashboards.jobs.search-job';
         $routeName = 'search-job';
         return view('layouts.dashboard',compact('view','routeName'));
     }
@@ -194,7 +194,9 @@ class HomeController extends Controller
     }
     public function jobdetail()
     {
-        return view('dashboards.jobs.job-detail');
+        $view = 'dashboards.jobs.job-detail';
+        $routeName = 'job-detail';
+        return view('layouts.dashboard',compact('view','routeName'));
     }
     /*market paages*/
     public function market1()

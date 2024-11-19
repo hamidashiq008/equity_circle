@@ -82,8 +82,8 @@
      </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link " aria-current="page"
-       onclick="Livewire.dispatch('changeContent', ['dashboards.joblist', 'joblist'])">
+        <a id="joblist" class="nav-link " aria-current="page"
+            onclick="Livewire.dispatch('changeContent', ['dashboards.joblist', 'joblist'])">
             <i class="icon material-symbols-outlined">
                 text_snippet
             </i>

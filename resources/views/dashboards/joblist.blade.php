@@ -1,7 +1,7 @@
     <div class="container-fluid">
         <div class="custom-container-card">
             <div id="content">
-                <div class="row g-3" style="margin-top: 3rem !important;">
+                <div class="row g-3">
 
                     <div class="col-sm-6 col-lg-4">
                         <div class="card h-100">

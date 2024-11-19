@@ -73,9 +73,9 @@ class HomeController extends Controller
         // return view('dashboards.fitness');
     }
 
-    public function searchJob(Request $request){
-        $view = 'dashboards.jobs.search-job';
-        $routeName = 'search-job';
+    public function jobSearch(Request $request){
+        $view = 'dashboards.jobs.job-search';
+        $routeName = 'job-search';
         return view('layouts.dashboard',compact('view','routeName'));
     }
     

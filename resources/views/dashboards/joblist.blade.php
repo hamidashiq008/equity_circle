@@ -11,7 +11,7 @@
                            <div class="card-body">
                               <a onclick="Livewire.dispatch('changeContent', ['dashboards.jobs.job-detail', 'job-detail'])" class="card-title turncate-2 job-detail-anchor" >How a Customer Academy Improves Retention</a>
                               <p class="card-text turncate-3">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <a  onclick="Livewire.dispatch('changeContent', ['dashboards.jobs.search-job', 'search-job'])" class="btn btn-primary btn-block">Find More</a>
+                              <a  onclick="Livewire.dispatch('changeContent', ['dashboards.jobs.job-search', 'job-search'])" class="btn btn-primary btn-block">Find More</a>
                            </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                            <div class="card-body">
                            <a onclick="Livewire.dispatch('changeContent', ['dashboards.jobs.job-detail', 'job-detail'])" class="card-title turncate-2 job-detail-anchor" >LMS Request For Personal Tooltik</a>
                               <p class="card-text turncate-3">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <a href="{{route('search-job')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
+                              <a href="{{route('job-search')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
                            </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                            <div class="card-body">
                            <a onclick="Livewire.dispatch('changeContent', ['dashboards.jobs.job-detail', 'job-detail'])" class="card-title turncate-2 job-detail-anchor" >Build an LMS Buiness Case</a>
                               <p class="card-text turncate-3">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <a href="{{route('search-job')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
+                              <a href="{{route('job-search')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
                            </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                            <div class="card-body">
                            <a onclick="Livewire.dispatch('changeContent', ['dashboards.jobs.job-detail', 'job-detail'])" class="card-title turncate-2 job-detail-anchor" >Training Evalution From Template</a>
                               <p class="card-text turncate-3">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <a href="{{route('search-job')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
+                              <a href="{{route('job-search')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
                            </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                            <div class="card-body">
                            <a onclick="Livewire.dispatch('changeContent', ['dashboards.jobs.job-detail', 'job-detail'])" class="card-title turncate-2 job-detail-anchor" >How a Customer Academy Improves Retention</a>
                               <p class="card-text turncate-3">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <a href="{{route('search-job')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
+                              <a href="{{route('job-search')}}" target="_blank" class="btn btn-primary btn-block">Find More</a>
                            </div>
                         </div>
                     </div>

@@ -38,7 +38,7 @@ Route::get('/crypto', [HomeController::class, 'crypto'])->name('crypto');
 Route::get('/fitness', [HomeController::class, 'fitness'])->name('fitness');
 
 
-Route::get('/jobs/search-job', [HomeController::class, 'searchJob'])->name('search-job');
+Route::get('/job-search', [HomeController::class, 'jobSearch'])->name('job-search');
 
 Route::get('userlist', [HomeController::class, 'userlist'])->name('userlist');
 Route::group(['middleware' => 'auth'], function () {

@@ -1,7 +1,6 @@
+<div>
+<section class="sign-in-page " style="background: #f8f9fa !important; overflow-y:auto; height:100%;">
 
-
-
-    <section class="sign-in-page " style="background: #f8f9fa !important; overflow-y:auto; height:100%;">
         <div class="container-fluid">
             <div class="row " style="height: 100vh;">
                 <div class="col-md-7 col-lg-7 overflow-hidden position-relative d-none d-md-block find-more-left-side">
@@ -285,5 +284,7 @@
             </div>
         </div>
     </section>
+</div>
+    
 
 

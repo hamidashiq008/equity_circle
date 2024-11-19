@@ -24,7 +24,7 @@
                             <li>Get a bonus customizable 30-60-90 day checklist and template</li>
                         </ul>
                         <div class="image-wrapper">
-                            <img src="{{ asset('images/image-no-one.jpg') }}" alt="">
+                            <img src="{{ asset('images/image-no-one.jpg') }}" style="width:100%" height="100%" alt="">
                         </div>
                     </div>
                 </div>

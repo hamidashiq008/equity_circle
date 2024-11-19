@@ -16,6 +16,9 @@
                 padding: 0;
                 margin: 0;
             }
+            body{
+                overflow: hidden !important;
+            }
             .banner-section{
                 /* background-image: url('../images/Banner.jpg') ; */
                 background-position: center;

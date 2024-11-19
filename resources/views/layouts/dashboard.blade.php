@@ -23,7 +23,15 @@
         Livewire.on('changeUrl', url => {
             // Update the browser's URL dynamically without reloading the page
             window.history.pushState({}, '', url);
+            console.log(url[0]);
+            const headerNavBar = document.querySelector(".verticalNavbar").querySelectorAll("a");
+            const urlSplitting = url[0];
+            const urlSplittingArray = urlSplitting.split('/');
+            console.log(urlSplittingArray[3]);
+            headerNavBar.forEach(nav => nav.classList.remove("active"))
+            document.getElementById(urlSplittingArray[3]).classList.add("active");
             scrollToTop();
+
         });
     </script>
 </body>

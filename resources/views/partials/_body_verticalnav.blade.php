@@ -1,5 +1,5 @@
 <!-- Sidebar Menu Start -->
-<ul class="navbar-nav iq-main-menu" id="sidebar-menu">
+<ul class="navbar-nav iq-main-menu verticalNavbar" id="sidebar-menu">
     {{-- <li class="nav-item static-item">
         <a class="nav-link static-item disabled" href="#" tabindex="-1">
             <span class="default-icon">MAIN</span>
@@ -16,7 +16,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" onclick="Livewire.dispatch('changeContent', ['dashboards.profiles', 'profiles'])" aria-current="page">
+        <a id="profiles" class="nav-link" onclick="Livewire.dispatch('changeContent', ['dashboards.profiles', 'profiles'])" aria-current="page">
             <i class="icon material-symbols-outlined">
                 person
             </i>
@@ -36,7 +36,7 @@
         </a>
         <ul class="sub-nav collapse" id="profile" data-bs-parent="#sidebar-menu">
             <li class="nav-item">
-                <a class="nav-link"
+                <a id="bussiness" class="nav-link"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.bussiness', 'bussiness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li class="nav-item d-none d-xl-block">
-                <a class="nav-link"
+                <a id="crypto" class="nav-link"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.crypto', 'crypto'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li class="nav-item d-none d-xl-block">
-                <a class="nav-link"
+                <a id="fitness" class="nav-link"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.fitness', 'fitness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -74,7 +74,7 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link"  onclick="Livewire.dispatch('changeContent', ['dashboards.education', 'education'])" aria-current="page">
+        <a id="education" class="nav-link"  onclick="Livewire.dispatch('changeContent', ['dashboards.education', 'education'])" aria-current="page">
          <i class="icon material-symbols-outlined">
              school
          </i>

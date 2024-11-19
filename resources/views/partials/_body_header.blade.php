@@ -1,3 +1,5 @@
+
+
 <div class="iq-top-navbar border-bottom">
     <nav class="nav navbar navbar-expand-lg navbar-light iq-navbar p-lg-0">
         <div class="container-fluid navbar-inner">
@@ -16,7 +18,7 @@
             </div>
 
             <div class="align-items-center h-100 gap-1 d-none d-xl-flex header-nav">
-              <a class="h-item" href="{{ route('bussiness') }}">
+              <a class="h-item " href="{{ route('bussiness') }}">
                 <i class="icon material-symbols-outlined">
                   trending_up
                 </i>
@@ -660,3 +662,13 @@
     @include('partials._body_sidebar')
     @include('dashboards.rightSidebar')
 </div>
+
+
+
+
+
+<!-- <script>
+    const headerNavBar = document.querySelector(".header-nav").querySelectorAll("a");
+    console.log(headerNavBar);
+
+</script> -->

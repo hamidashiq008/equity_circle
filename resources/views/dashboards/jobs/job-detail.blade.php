@@ -22,6 +22,7 @@
       background-color: white;
       box-shadow: 0px 0px 15px 2px #888888;
    } */
+
 </style>
 
         <div class="container">
@@ -67,9 +68,9 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-lg-7">
-                  <div class="row cards-wrapper gap-3 mb-4 mx-1">
-                        <div class="col-2 card-body">
+                  <div class="col-lg-8">
+                  <div class="row cards-wrapper gap-3 mb-4 mx-0">
+                        <div class="col-2 col-sm-12 card-body ">
                         <div>
                            <img src="{{asset('images/gym(1).jpg')}}" class="avatar avatar-50 job-icon mb-3 d-inline-block" loading="lazy" alt="img">
                         </div>
@@ -82,7 +83,7 @@
                            <small>New</small>
                         </div> -->
                         </div>
-                        <div class="col-2 card-body">
+                        <div class="col-2 col-sm-12 card-body">
                            <div>
                               <img src="{{asset('images/gym(1).jpg')}}" class="avatar avatar-50 job-icon mb-3 d-inline-block" loading="lazy" alt="img">
                            </div>
@@ -95,7 +96,7 @@
                               <small>New</small>
                            </div> -->
                         </div>
-                        <div class="col-2 card-body">
+                        <div class="col-2 col-sm-12 card-body">
                            <div>
                               <img src="{{asset('images/gym(1).jpg')}}" class="avatar avatar-50 job-icon mb-3 d-inline-block" loading="lazy" alt="img">
                            </div>
@@ -327,7 +328,7 @@
 
 
                   </div>
-                 <div class="col-sm-12 col-lg-5">
+                 <div class="col-sm-12 col-lg-4">
             <div class="card">
                <div class="card-header d-flex justify-content-between">
                   <div class="header-title">

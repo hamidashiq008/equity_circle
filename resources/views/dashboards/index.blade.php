@@ -137,10 +137,36 @@
             
             
             .top-header-div{
-                position: absolute;
+                position: fixed;
                 z-index: 99;
                 top: 10px;
-               
+                left: 50%;
+                transform: translateX(-50%);
+                background: #0008;
+                max-width: 500px;
+                width: 100%;
+                border-radius: 20px;
+            }
+
+            /* .shadowfilter {
+                -webkit-filter: drop-shadow(12px 12px 7px rgba(255, 255, 255, 0.5));
+                filter: drop-shadow(12px 12px 7px rgba(255, 255, 255, 0.5));
+            } */
+
+            .top-header-div .banner-img{
+                display: flex;
+                justify-content: center;
+                padding: 20px 20px 20px;
+                gap: 2px;
+                width: 140px;
+                margin: 15px auto;
+                box-shadow: 0px 0px 10px rgb(255, 255, 255) !important;
+                border-radius: 18px;
+                transition: transform 1.5s ease;
+            }
+
+            .top-header-div .banner-img img{
+                width: 50%;
             }
             
             @media(max-width: 2000px){
@@ -322,35 +348,79 @@
             }
             
         </style>
+
+        <style>
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: none;
+            transition: transform 0.5s ease;
+        }
+
+        .logo2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* animation: bounce-stretch 2s infinite; */
+            animation: none;
+            transition: transform 0.5s ease;
+        }
+
+        .top-header-div:hover .banner-img{
+            box-shadow: none !important;
+        }
+
+        .top-header-div:hover .banner-img .logo{
+            animation: spin 2s infinite;
+        }
+
+        .top-header-div:hover .banner-img .logo2{
+            animation: bounce-stretch 2s infinite;
+        }
+
+        @keyframes bounce-stretch {
+            0%,
+            100% {
+            transform: translateY(0) scale(1, 1); /* Normal position and scale */
+            }
+            30% {
+            transform: translateY(-20px) scale(1.1, 0.9); /* Stretch upwards */
+            }
+            50% {
+            transform: translateY(0) scale(0.9, 1.1); /* Compress downwards */
+            }
+            70% {
+            transform: translateY(-10px) scale(1.05, 0.95); /* Slight stretch */
+            }
+        }
+
+        @keyframes spin {
+            from {
+            transform: rotate(0deg);
+            }
+            to {
+            transform: rotate(360deg);
+            }
+        }
+        </style>
+
+
         
         <section class="banner-section">
             <div class="top-header-div d-flex justify-content-between align-items-center w-100 px-4 ">
-                <div class="left-content">
-                    <ul class="list-unstyled d-flex align-items-center justify-content-start gap-4 m-0">
-                        <li class="text-white">
-                            Albums
-                        </li>
-                        <li class="text-white">
-                            Projects
-                        </li>
-                        <li class="text-white">
-                            Tour
-                        </li>
-                        <li class="text-white">
-                            Shop All
-                        </li>
-                    </ul>
-                </div>
-                <div class="center-content">
-                    <span class="text-white">
-        
-                        Drake Related
-                    </span>
-                </div>
-                <div class="right-content">
-                    <span class="text-white">
-                        Cart (0)
-                    </span>
+                {{-- <div class="logo">Your Logo</div> --}}
+                <div class="banner-img">
+                    <img src="{{URL::asset('/images/favicon.png')}}" class="shadowfilter logo" alt="">
+                    <img src="{{URL::asset('/images/Equity.png')}}" class="shadowfilter logo2" alt="">
                 </div>
             </div>
             <div class="image-div position-relative" style="top: 0; left: 0;">

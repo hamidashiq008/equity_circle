@@ -91,7 +91,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link " target="_blank" aria-current="page"
+        <a class="nav-link" aria-current="page"
         href="{{route('event-calender')}}">
             <i class="icon material-symbols-outlined">
                 calendar_month

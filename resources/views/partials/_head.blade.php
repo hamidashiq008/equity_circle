@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}"/>
+<link rel="shortcut icon" href="{{ asset('images/favicon.png') }}"/>
 @if(activeRoute(route('ui.iconfontawsome')) === 'active')
 <link rel="stylesheet" href="{{ asset('vendor/@fortawesome/fontawesome-free/css/all.min.css')}}">
 @elseif(activeRoute(route('ui.iconlineawsome')) === 'active')

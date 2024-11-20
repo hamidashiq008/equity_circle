@@ -121,10 +121,14 @@
     
     
     .top-header-div{
-        position: absolute;
+        position: fixed;
         z-index: 99;
-        top: 10px;
-       
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #000;
+        max-width: 400px;
+        width: 100%;
     }
     
     @media(max-width: 2000px){

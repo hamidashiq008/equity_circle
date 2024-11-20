@@ -1,7 +1,7 @@
 {{-- <x-app-layout bodyClass="profile-page"> --}}
     
     <div class="container position-relative p-0">
-        <div class="header-cover-img" style="background-image: url('{{ URL::asset('/images/social-banner.png') }}'); background-size: cover; background-repeat: no-repeat;">
+        <div class="header-cover-img" style="background-image: url('{{ URL::asset('/images/social-banner.jpg') }}'); background-size: cover; background-repeat: no-repeat; background-position: center; border-radius: 20px;">
         </div>
     </div>
 

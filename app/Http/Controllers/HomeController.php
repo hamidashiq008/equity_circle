@@ -28,23 +28,28 @@ class HomeController extends Controller
     {
         $view = 'dashboards.equitycircle';
         $routeName = 'equity-circle';
-        return view('layouts.dashboard',compact('view','routeName'));
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
     }
     public function profiles(Request $request){
+        $posts_data = Posts::all();
         $view = 'dashboards.profiles';
         $routeName = 'profiles';
-        return view('layouts.dashboard',compact('view','routeName'));
+        $data = ['view' => $view, 'routeName' => $routeName , 'posts_data' => $posts_data];
+        return view('layouts.dashboard',compact('data'));
     }
     public function education(Request $request){
         $view = 'dashboards.education';
         $routeName = 'education';
-        return view('layouts.dashboard',compact('view','routeName'));
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
     }
     public function joblist(Request $request){
         $view = 'dashboards.joblist';
         $routeName = 'joblist';
-       
-        return view('layouts.dashboard',compact('view','routeName'));
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
+        
     }
     public function eventCalender(Request $request){
         $posts_data = Posts::all();
@@ -84,28 +89,32 @@ public function submit_post(Request $request)
     public function bussiness(Request $request){
         $view = 'dashboards.bussiness';
         $routeName = 'bussiness';
-        return view('layouts.dashboard',compact('view','routeName'));
-        // return view('dashboards.bussiness');
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
     }
 
     public function crypto(Request $request){
         $view = 'dashboards.crypto';
         $routeName = 'crypto';
-        return view('layouts.dashboard',compact('view','routeName'));
-        // return view('dashboards.crypto');
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
+
     }
 
     public function fitness(Request $request){
         $view = 'dashboards.fitness';
         $routeName = 'fitness';
-        return view('layouts.dashboard',compact('view','routeName'));
-        // return view('dashboards.fitness');
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
+       
     }
 
     public function jobSearch(Request $request){
         $view = 'dashboards.jobs.job-search';
         $routeName = 'job-search';
-        return view('layouts.dashboard',compact('view','routeName'));
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
+        
     }
     
 
@@ -234,7 +243,8 @@ public function submit_post(Request $request)
     {
         $view = 'dashboards.jobs.job-detail';
         $routeName = 'job-detail';
-        return view('layouts.dashboard',compact('view','routeName'));
+        $data = ['view' => $view, 'routeName' => $routeName];
+        return view('layouts.dashboard',compact('data'));
     }
     /*market paages*/
     public function market1()

@@ -26,23 +26,23 @@ Route::get('/dashboard', function () {
   return view('dashboard');
 })->middleware(['auth'])->name('index');
 
-Route::get('/equity-circle', [HomeController::class, 'equitycircle'])->name('equity-circle');
-Route::get('/profiles', [HomeController::class, 'profiles'])->name('profiles');
-Route::get('/education', [HomeController::class, 'education'])->name('education');
-Route::get('/job-list', [HomeController::class, 'joblist'])->name('joblist');
-Route::get('/event-calender', [HomeController::class, 'eventCalender'])->name('eventcalender');
 
-
-Route::get('/bussiness', [HomeController::class, 'bussiness'])->name('bussiness');
-Route::get('/crypto', [HomeController::class, 'crypto'])->name('crypto');
-Route::get('/fitness', [HomeController::class, 'fitness'])->name('fitness');
-
-
-Route::get('/job-search', [HomeController::class, 'jobSearch'])->name('job-search');
-
-Route::get('userlist', [HomeController::class, 'userlist'])->name('userlist');
-Route::group(['middleware' => 'auth'], function () {
-
+Route::group(['middleware' => 'check.role'], function () {
+  Route::get('/equity-circle', [HomeController::class, 'equitycircle'])->name('equity-circle');
+  Route::get('/profiles', [HomeController::class, 'profiles'])->name('profiles');
+  Route::get('/education', [HomeController::class, 'education'])->name('education');
+  Route::get('/job-list', [HomeController::class, 'joblist'])->name('joblist');
+  Route::get('/event-calender', [HomeController::class, 'eventCalender'])->name('eventcalender');
+  Route::post('/submit-post',[HomeController::class,'submit_post'])->name('submit_post');
+  
+  Route::get('/bussiness', [HomeController::class, 'bussiness'])->name('bussiness');
+  Route::get('/crypto', [HomeController::class, 'crypto'])->name('crypto');
+  Route::get('/fitness', [HomeController::class, 'fitness'])->name('fitness');
+  
+  
+  Route::get('/job-search', [HomeController::class, 'jobSearch'])->name('job-search');
+  
+  Route::get('userlist', [HomeController::class, 'userlist'])->name('userlist');
   // Permission Module
   // Route::get('/permission-role', [RolePermission::class, 'index'])->name('permission-role.list');
   // Route::post('/permission-role/store', [RolePermission::class, 'store'])->name('permission-role.store');

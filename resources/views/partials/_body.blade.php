@@ -18,7 +18,7 @@
                 </div>
                 <div id="content-page" class="content-inner">
                     {{-- {{ $slot }} --}}
-                    <livewire:main-content :view="$view" :routeName="$routeName" />
+                    <livewire:main-content :data="$data" :role="$role"/>
                 </div>
            </div>
         </div>

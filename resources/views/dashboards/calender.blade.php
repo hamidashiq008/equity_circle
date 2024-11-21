@@ -1,5 +1,4 @@
 
-<x-app-layout :isSubheader="true">
     <x-slot name="header">
         <div class="header-for-bg">
             <div class="background-header position-relative">

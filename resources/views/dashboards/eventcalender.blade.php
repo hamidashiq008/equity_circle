@@ -1,5 +1,3 @@
-<x-app-layout :isZuck=true>
-    
     <!-- <div class="container"> -->
     <div class="container-fluid">
         <div class="custom-container">
@@ -11,6 +9,7 @@
                         </div>
                     </div>
                 </div>
+                @if($role == "admin")
                 <div class="row">
                     <div class="col-sm-12">
                         <div id="post-modal-data"
@@ -45,7 +44,7 @@
                             <div class="card-body">
                                 <div class="mb-5" data-bs-toggle="modal" data-bs-target="#post-modal">
                                     <form class="post-text w-100" action="javascript:void();">
-                                        <input type="text" class="form-control rounded px-0"
+                                        <input type="text" name="title" class="form-control rounded px-0"
                                             placeholder="Write And Share Your Post With Your Friends..."
                                             style="border:none;">
                                     </form>
@@ -141,9 +140,14 @@
                                                     <img src="{{ asset('/images/bussiness(1).jpg') }}" alt="userimg"
                                                         class="avatar-60 rounded-circle img-fluid" loading="lazy">
                                                 </div>
-                                                <form class="post-text ms-3 w-100" action="javascript:void();">
-                                                    <input type="text" class="form-control rounded"
+                                                <form class="post-text ms-3 w-100" action="{{route('submit_post')}}" method="post" enctype="multipart/form-data">
+                                                    @csrf
+                                                    <input type="text" name="title" class="form-control rounded"
                                                         placeholder="Write something here..." style="border:none;">
+                                                    <input type="text" name="description" class="form-control rounded"
+                                                        placeholder="Write description here..." style="border:none;">
+                                                    <input type="file" name="image[]" multiple accept="image/*">
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
                                                 </form>
                                             </div>
                                             <hr>
@@ -325,7 +329,9 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class="row social-post-container">
+                    @foreach($data['posts_data'] as $data)
                     <div class="col-sm-12 social-post">
                         <div class="card card-block card-stretch card-height">
                             <div class="card-body">
@@ -423,10 +429,8 @@
                                     </div>
                                 </div>
                                 <div class="mt-4">
-                                    <p class="m-0">"Energy, the tangible expression of pure thought, propels
-                                        intentions into
-                                        powerful actions, bridging the gap between
-                                        mind and manifestation."</p>
+                                    <p class="m-0">{{$data->title}}</p>
+                                    <p class="m-0">{{$data->description}}</p>
                                     <ul class="list-inline m-0 p-0 d-flex flex-wrap gap-1">
                                         <li>
                                             <a href="javascript:void(0);">#friends</a>
@@ -448,7 +452,9 @@
                                 <div class="user-post mt-4">
                                     <a data-fslightbox="gallery" href="{{ asset('/images/page-img/fun.jpg') }}"
                                         class="rounded">
-                                        <img src="{{ asset('/images/bussiness(2).jpg') }}" alt="post-image"
+                                         <?php $data['images'] = json_decode($data['images'], true) ?>
+
+                                        <img src="{{ asset('data/images/'.$data['images'][0]) }}" alt="post-image"
                                             class="img-fluid rounded w-100" loading="lazy">
                                     </a>
                                 </div>
@@ -741,6 +747,7 @@
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <div class="col-sm-12 social-post">
                         <div class="card card-block card-stretch card-height">
                             <div class="card-body">
@@ -3384,4 +3391,4 @@
 
     </div>
     @include('components.shareoffcanvas')
-</x-app-layout>
+

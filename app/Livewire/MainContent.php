@@ -9,12 +9,16 @@ class MainContent extends Component
 {
     public $view = 'dashboards.equitycircle'; // Default view that loads initially
     public $routeName = 'equity-circle';
+    public $data;
+    public $role; // Role of the user
     
         // Mount method to accept parameters
-        public function mount($view, $routeName)
+        public function mount($data,$role)
         {
-            $this->view = $view;
-            $this->routeName = $routeName;
+            $this->data = $data;
+            $this->view = $data['view'];
+            $this->routeName = $data['routeName'];
+            $this->role = $role;
         }
 
         
@@ -60,11 +64,14 @@ class MainContent extends Component
         }
          // Dispatch the browser event to change the URL
         $this->dispatch('changeUrl', $route);
-    
+        $role = $this->role;
+        $data = $this->data;
         // Return the view with dynamic data
         return view('livewire.main-content', [
             'view' => $viewName,
-            'route' => $route
+            'route' => $route,
+            'role'=> $role,
+            'data'=>$data
         ]);
     }
     

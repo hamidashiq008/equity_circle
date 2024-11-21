@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Posts;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
@@ -46,11 +47,39 @@ class HomeController extends Controller
         return view('layouts.dashboard',compact('view','routeName'));
     }
     public function eventCalender(Request $request){
+        $posts_data = Posts::all();
         $view = 'dashboards.eventcalender';
         $routeName = 'eventcalender';
-        return view('layouts.dashboard',compact('view','routeName'));
+        $data = ['view' => $view, 'routeName' => $routeName , 'posts_data' => $posts_data];
+        return view('layouts.dashboard',compact('data'));
         // return view('dashboards.eventcalender');
     }
+
+
+public function submit_post(Request $request)
+{
+    $request->validate([
+        'title' => 'required',
+        'description' => 'required',
+        'image' => 'required|array',
+        'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+    ]);
+
+    $images = [];
+    foreach ($request->file('image') as $image) {
+        $imageName = time() . '_' . $image->getClientOriginalName();
+        $image->move(public_path('data/images'), $imageName);
+        $images[] = $imageName;
+    }
+
+    $post = new Posts();
+    $post->title = $request->title;
+    $post->description = $request->description;
+    $post->images = json_encode($images);
+    $post->save();
+
+    return redirect()->back()->withSuccess(__('message.msg_added', ['name' => __('posts.store')]));
+}
 
     public function bussiness(Request $request){
         $view = 'dashboards.bussiness';

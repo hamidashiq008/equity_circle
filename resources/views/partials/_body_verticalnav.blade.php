@@ -92,7 +92,7 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" aria-current="page"
-        href="{{route('event-calender')}}">
+            onclick="Livewire.dispatch('changeContent', ['dashboards.eventcalender', 'eventcalender'])">
             <i class="icon material-symbols-outlined">
                 calendar_month
             </i>

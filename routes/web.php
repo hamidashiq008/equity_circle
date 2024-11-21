@@ -30,7 +30,7 @@ Route::get('/equity-circle', [HomeController::class, 'equitycircle'])->name('equ
 Route::get('/profiles', [HomeController::class, 'profiles'])->name('profiles');
 Route::get('/education', [HomeController::class, 'education'])->name('education');
 Route::get('/job-list', [HomeController::class, 'joblist'])->name('joblist');
-Route::get('/event-calender', [HomeController::class, 'eventCalender'])->name('event-calender');
+Route::get('/event-calender', [HomeController::class, 'eventCalender'])->name('eventcalender');
 
 
 Route::get('/bussiness', [HomeController::class, 'bussiness'])->name('bussiness');

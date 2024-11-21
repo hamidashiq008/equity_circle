@@ -47,7 +47,7 @@ class HomeController extends Controller
     }
     public function eventCalender(Request $request){
         $view = 'dashboards.eventcalender';
-        $routeName = 'event-calender';
+        $routeName = 'eventcalender';
         return view('layouts.dashboard',compact('view','routeName'));
         // return view('dashboards.eventcalender');
     }

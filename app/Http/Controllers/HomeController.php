@@ -64,11 +64,22 @@ class HomeController extends Controller
 public function submit_post(Request $request)
 {
     $request->validate([
-        'title' => 'required',
-        'description' => 'required',
-        'image' => 'required|array',
+        'title' => 'string',
+        'description' => 'string',
+        'image' => 'array',
         'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'video' => 'array',
+        'video.*' => 'mimes:mp4,mov,ogg|max:10240',
     ]);
+
+
+    $videos = [];
+foreach ($request->file('video') as $video) {
+    $videoName = time() . '_' . $video->getClientOriginalName();
+    $video->move(public_path('data/videos'), $videoName);
+    $videos[] = $videoName;
+}
+
 
     $images = [];
     foreach ($request->file('image') as $image) {
@@ -81,6 +92,7 @@ public function submit_post(Request $request)
     $post->title = $request->title;
     $post->description = $request->description;
     $post->images = json_encode($images);
+    $post->videos = json_encode($videos);
     $post->save();
 
     return redirect()->back()->withSuccess(__('message.msg_added', ['name' => __('posts.store')]));
@@ -114,7 +126,6 @@ public function submit_post(Request $request)
         $routeName = 'job-search';
         $data = ['view' => $view, 'routeName' => $routeName];
         return view('layouts.dashboard',compact('data'));
-        
     }
     
 

@@ -1,6 +1,7 @@
 <?php
 namespace App\Livewire;
 
+use App\Models\Posts;
 use Livewire\Component;
 
 use Route;
@@ -15,7 +16,14 @@ class MainContent extends Component
         // Mount method to accept parameters
         public function mount($data,$role)
         {
-            $this->data = $data;
+            if($data['view'] == "dashboards.profiles"){
+                $posts = Posts::all();
+                $data['posts_data'] = $posts;
+                $this->data = $data;
+            }
+            else{
+                $this->data = $data;
+            }
             $this->view = $data['view'];
             $this->routeName = $data['routeName'];
             $this->role = $role;
@@ -28,6 +36,10 @@ class MainContent extends Component
     // Method to update the current view based on the event payload
     public function loadView($viewName, $routeName)
     {
+        if($viewName == "dashboards.profiles"){
+            $posts = Posts::all();
+            $this->data['posts_data'] = $posts;
+        }
         \Log::info("Event caught: changeContent with viewName: $viewName and routeName: $routeName");
         $this->view = $viewName;
         $this->routeName = $routeName;
@@ -74,7 +86,5 @@ class MainContent extends Component
             'data'=>$data
         ]);
     }
-    
-    
 }
 

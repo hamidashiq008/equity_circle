@@ -420,6 +420,7 @@
                                                                         <input type="text" name="description" class="form-control rounded"
                                                                             placeholder="Write description here..." style="border:none;">
                                                                         <input type="file" name="image[]" multiple accept="image/*">
+                                                                        <input type="file" name="video[]" accept="video/mp4, video/x-m4v, video/*" capture="user" multiple>
                                                                         <button type="submit" class="btn btn-primary">Submit</button>
                                                                     </form>
                                                                 </div>
@@ -2262,7 +2263,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

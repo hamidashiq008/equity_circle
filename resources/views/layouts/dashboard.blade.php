@@ -12,25 +12,49 @@
     {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
 </head>
 <body class="{{ isset($bodyClass) ? $bodyClass : '' }} sidebar-main">
-    
+
+
+    @include('partials.bodyLoader')
     @include('partials._body')
     @livewireScripts
 
     
     <!-- Your custom script for debugging -->
     <script>
+
+        var $path
         // Listen for the 'changeUrl' event emitted by Livewire
         Livewire.on('changeUrl', url => {
             // Update the browser's URL dynamically without reloading the page
+            showBodyLoader();
             window.history.pushState({}, '', url);
             console.log(url[0]);
-            const headerNavBar = document.querySelector(".verticalNavbar").querySelectorAll("a");
-            const urlSplitting = url[0];
-            const urlSplittingArray = urlSplitting.split('/');
-            console.log(urlSplittingArray[3]);
-            headerNavBar.forEach(nav => nav.classList.remove("active"))
-            document.getElementById(urlSplittingArray[3]).classList.add("active");
+            var currentPath = window.location.pathname;
+            console.log("Current Path:", currentPath);
+
+            if(currentPath == $path){
+                $('.nav-route').removeClass('active');   
+                $('.activeRoute').addClass('active');
+            }
+            
+            $('.nav-route').on('click', function () {
+                $path = $(this).data('path');  
+                console.log($path);
+                $('.nav-route').removeClass('activeRoute');        
+                $(this).addClass('activeRoute');
+            });
+
+            setTimeout(() => {
+                hideBodyLoader();
+            }, 1000);
             scrollToTop();
+            // const headerNavBar = document.querySelector(".verticalNavbar").querySelectorAll("a");
+            // const urlSplitting = url[0];
+            // const urlSplittingArray = urlSplitting.split('/');
+            // console.log(urlSplittingArray[3]);
+            // headerNavBar.forEach(nav => nav.classList.remove("active"))
+            // document.getElementById(urlSplittingArray[3]).classList.add("active");
+            
 
         });
     </script>

@@ -1,14 +1,14 @@
 <!-- Sidebar Menu Start -->
 <ul class="navbar-nav iq-main-menu verticalNavbar" id="sidebar-menu">
     {{-- <li class="nav-item static-item">
-        <a class="nav-link static-item disabled" href="#" tabindex="-1">
+        <a class="nav-link nav-route static-item disabled" href="#" tabindex="-1">
             <span class="default-icon">MAIN</span>
             <span class="mini-icon" data-bs-toggle="tooltip" title="Social" data-bs-placement="right">-</span>
         </a>
     </li> --}}
     <li class="nav-item">
 
-        <a class="nav-link" aria-current="page" href="{{url('/')}}">
+        <a class="nav-link nav-route" aria-current="page" href="{{url('/')}}">
             <i class="icon material-symbols-outlined">
                 Home
             </i>
@@ -16,7 +16,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a id="profiles" class="nav-link" onclick="Livewire.dispatch('changeContent', ['dashboards.profiles', 'profiles'])" aria-current="page">
+        <a id="profiles" class="nav-link nav-route" onclick="Livewire.dispatch('changeContent', ['dashboards.profiles', 'profiles'])"data-path="/profiles" aria-current="page">
             <i class="icon material-symbols-outlined">
                 person
             </i>
@@ -26,7 +26,7 @@
 
     
     <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#profile" role="button"
+        <a class="nav-link nav-route" data-bs-toggle="collapse" href="#profile" role="button"
             aria-controls="profile">
             <i class="icon material-symbols-outlined">
                 newspaper
@@ -36,7 +36,7 @@
         </a>
         <ul class="sub-nav collapse" id="profile" data-bs-parent="#sidebar-menu">
             <li class="nav-item">
-                <a id="bussiness" class="nav-link"
+                <a id="bussiness" class="nav-link nav-route" data-path="/bussiness"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.bussiness', 'bussiness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li class="nav-item d-none d-xl-block">
-                <a id="crypto" class="nav-link"
+                <a id="crypto" class="nav-link nav-route" data-path="/crypto"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.crypto', 'crypto'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li class="nav-item d-none d-xl-block">
-                <a id="fitness" class="nav-link"
+                <a id="fitness" class="nav-link nav-route" data-path="/fitness"
                 onclick="Livewire.dispatch('changeContent', ['dashboards.fitness', 'fitness'])">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -63,7 +63,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"
+                <a class="nav-link nav-route"
                     href="{{route('profile.profile3')}}">
                     <i class="icon material-symbols-outlined filled">
                         fiber_manual_record
@@ -74,7 +74,7 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a id="education" class="nav-link"  onclick="Livewire.dispatch('changeContent', ['dashboards.education', 'education'])" aria-current="page">
+        <a id="education" class="nav-link nav-route" data-path="/education" onclick="Livewire.dispatch('changeContent', ['dashboards.education', 'education'])" aria-current="page">
          <i class="icon material-symbols-outlined">
              school
          </i>
@@ -82,7 +82,7 @@
      </a>
     </li>
     <li class="nav-item">
-        <a id="joblist" class="nav-link " aria-current="page"
+        <a class="nav-link nav-route " aria-current="page" data-path="/job-list"
             onclick="Livewire.dispatch('changeContent', ['dashboards.joblist', 'joblist'])">
             <i class="icon material-symbols-outlined">
                 text_snippet
@@ -91,7 +91,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" aria-current="page"
+        <a class="nav-link nav-route" aria-current="page" data-path="/eventcalender"
             onclick="Livewire.dispatch('changeContent', ['dashboards.eventcalender', 'eventcalender'])">
             <i class="icon material-symbols-outlined">
                 calendar_month
@@ -100,8 +100,8 @@
         </a>
     </li>
     <li class="nav-item d-block d-xl-none">
-        <a class="nav-link " aria-current="page"
-        href="{{route('bussiness')}}">
+        <a class="nav-link nav-route " aria-current="page" data-path="/bussiness"
+        onclick="Livewire.dispatch('changeContent', ['dashboards.bussiness', 'bussiness'])">
             <i class="icon material-symbols-outlined">
                 trending_up
             </i>
@@ -109,8 +109,8 @@
         </a>
     </li>
     <li class="nav-item d-block d-xl-none">
-        <a class="nav-link " aria-current="page"
-        href="{{route('crypto')}}">
+        <a class="nav-link nav-route " aria-current="page" data-path="/crypto"
+        onclick="Livewire.dispatch('changeContent', ['dashboards.crypto', 'crypto'])">
             <i class="icon material-symbols-outlined">
                 currency_bitcoin
             </i>
@@ -118,8 +118,8 @@
         </a>
     </li>
     <li class="nav-item d-block d-xl-none">
-        <a class="nav-link " aria-current="page"
-        href="{{route('fitness')}}">
+        <a class="nav-link nav-route " aria-current="page" data-path="/fitness"
+        onclick="Livewire.dispatch('changeContent', ['dashboards.fitness', 'fitness'])">
             <i class="icon material-symbols-outlined">
                 exercise
             </i>
@@ -127,7 +127,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link " aria-current="page"
+        <a class="nav-link nav-route " aria-current="page"
             href="#">
             <span class="material-symbols-outlined position-relative">notifications
                 <span class="bg-primary text-white notification-badge"></span>
